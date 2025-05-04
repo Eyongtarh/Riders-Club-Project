@@ -1,0 +1,1 @@
+web: gunicorn riders_club_project.wsgi
