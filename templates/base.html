@@ -2,7 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'contact' as contact_url %}
-{% url 'bookings' as bookings_url %}
+{% url 'bookings' as session_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -49,10 +49,10 @@
                 {% endif %}" href="{% url 'contact' %}">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.path == bookings_url %}
+              <a class="nav-link {% if request.path == session_list_url %}
                     active
                     page
-                  {% endif %}" href="{% url 'bookings' %}">Book Training</a>
+                  {% endif %}" href="{% url 'session_list' %}">Book Training</a>
             </li>
             {% if user.is_authenticated %}
               <li class="nav-item">
