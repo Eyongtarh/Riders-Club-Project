@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from datetime import session_date
+from datetime import date as session_date
 
 # Create your models here.
 
