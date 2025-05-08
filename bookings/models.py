@@ -8,7 +8,7 @@ class TrainingSession(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     session_date = models.DateField()
     session_time = models.TimeField()
-    notes = models.TextField(blank=True, max_length=500)
+    notes = models.TextField(blank=True)
 
     def clean(self):
         # Validate that the session date is not in the past
