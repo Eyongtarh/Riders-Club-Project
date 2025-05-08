@@ -13,6 +13,13 @@
     <title>Riders Club</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Session Manager -->
+    <title>
+      {% block title %}
+        Session Manager
+      {% endblock %}
+    </title>
+
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
@@ -30,30 +37,33 @@
 
   <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span class="green-nn">Riders</span>Club<span class="thin">|Bike</span></span></a>
+        <!-- Brand Logo and Name -->
+        <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span class="green-nn">Riders</span>Club</span></a>
+
+        <!-- Navbar Toggler (for mobile view) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Home Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == home_url %}
-                  active
-                  page
-                {% endif %}" href="{% url 'home' %}">Home</a>
+              <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Home</a>
             </li>
+
+            <!-- Contact Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == contact_url %}
-                  active
-                  page
-                {% endif %}" href="{% url 'contact' %}">Contact</a>
+              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
             </li>
+
+            <!-- Book-Training Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == session_list_url %}
-                    active
-                    page
-                  {% endif %}" href="{% url 'session_list' %}">Book Training</a>
+              <a class="nav-link {% if request.path == session_list_url %}active{% endif %}" href="{% url 'session_list' %}">Book-Training</a>
             </li>
+
+            <!-- Authenticated User Links -->
             {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
@@ -67,10 +77,13 @@
               </li>
             {% endif %}
           </ul>
-          <span class="navbar-text text-muted">Gothenburg Riders</span>
+
+          <!-- Navbar Text (Optional) -->
+          <span class="navbar-text text-muted d-none d-md-block">Gothenburg Riders</span>
         </div>
       </div>
     </nav>
+
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2">

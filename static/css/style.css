@@ -1,7 +1,64 @@
 body {
     background-color: #F9FAFC;
   }
-  
+
+  /* start new Styles */
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .navbar-brand .green-nn {
+    color: #4caf50; /* Green color for Riders */
+  }
+
+  .navbar-brand {
+    font-weight: lighter;
+  }
+
+  .nav-item {
+    margin-left: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #4caf50; /* Green color on hover or active */
+  }
+
+  .navbar-text {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+
+    .nav-item {
+      margin-left: 1rem;
+    }
+
+    .navbar-text {
+      display: none; /* Hide text on smaller screens */
+    }
+  }
+
+ /* end new Styles */
+
   .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -11,10 +68,6 @@ body {
   
   .green-nn {
     color: #08b731;
-  }
-  
-  .thin {
-    font-weight: 300;
   }
   
   .light-bg {

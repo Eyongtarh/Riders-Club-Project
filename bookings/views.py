@@ -21,6 +21,8 @@ def session_create(request):
         session.user = request.user
         session.save()
         return redirect('session_list')
+    else:
+        form = TrainingSessionForm()
     return render(request, 'bookings/session_form.html', {'form': form})
 
 
@@ -31,7 +33,7 @@ def session_update(request, pk):
     if form.is_valid():
         form.save()
         return redirect('session_list')
-    return render(request, 'bookings/session_form.html', {'form': form})
+    return render(request, 'bookings/session_update.html', {'form': form})
 
 
 @login_required
