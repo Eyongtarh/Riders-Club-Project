@@ -12,32 +12,13 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 my-5">
-        <h1>Contact Us</h1>
+        <h3>Contact Us</h3>
         <p>How can we help?</p>
-
-        <form method="POST">
+        <form method="post">
+          {{ form|crispy }}
           {% csrf_token %}
-
-          <div>
-            <label for="id_name">Name:</label>
-            {{ form.name }}
-          </div>
-
-          <div>
-            <label for="id_email">Email:</label>
-            {{ form.email }}
-          </div>
-
-          <div>
-            <label for="id_message">Message:</label>
-            {{ form.message }}
-          </div>
-
-          <div>
-            <button type="submit">Submit</button>
-          </div>
+          <button class="btn btn-secondary" type="submit">Submit</button>
         </form>
-
         {% if form.errors %}
           <div style="color: red;">
             <p>There were errors in your form. Please fix them and try again.</p>
