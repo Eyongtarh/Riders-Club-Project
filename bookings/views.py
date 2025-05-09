@@ -5,29 +5,29 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
-def training_session_list(request):
-    sessions = TrainingSession.objects.all()
+def session_list(request):
+    sessions = TrainingSession.objects.filter(author=request.user)
     return render(request,
-                  'training_sessions/session_list.html',
-                  {'sessions': sessions})
+                  'bookings/session_list.html', {'sessions': sessions})
 
 
 @login_required
-def training_session_create(request):
+def session_create(request):
     if request.method == 'POST':
         form = TrainingSessionForm(request.POST)
         if form.is_valid():
-            form.save()
+            session = form.save(commit=False)
+            session.author = request.user
+            session.save()
             return redirect('session_list')
     else:
         form = TrainingSessionForm()
-    return render(request,
-                  'training_sessions/session_form.html', {'form': form})
+    return render(request, 'bookings/session_form.html', {'form': form})
 
 
 @login_required
-def training_session_update(request, pk):
-    session = get_object_or_404(TrainingSession, pk=pk)
+def session_update(request, pk):
+    session = get_object_or_404(TrainingSession, pk=pk, author=request.user)
     if request.method == 'POST':
         form = TrainingSessionForm(request.POST, instance=session)
         if form.is_valid():
@@ -35,16 +35,14 @@ def training_session_update(request, pk):
             return redirect('session_list')
     else:
         form = TrainingSessionForm(instance=session)
-    return render(request,
-                  'training_sessions/session_form.html', {'form': form})
+    return render(request, 'bookings/session_form.html', {'form': form})
 
 
 @login_required
-def training_session_delete(request, pk):
-    session = get_object_or_404(TrainingSession, pk=pk)
+def session_delete(request, pk):
+    session = get_object_or_404(TrainingSession, pk=pk, author=request.user)
     if request.method == 'POST':
         session.delete()
         return redirect('session_list')
     return render(request,
-                  'training_sessions/session_confirm_delete.html',
-                  {'session': session})
+                  'bookings/session_confirm_delete.html', {'session': session})
