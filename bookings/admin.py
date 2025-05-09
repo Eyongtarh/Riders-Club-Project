@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import TrainingSession
+from .models import Booking
 
 
-@admin.register(TrainingSession)
-class TrainingSessionAdmin(admin.ModelAdmin):
-    list_display = ('author', 'session_date', 'session_time')
-    search_fields = ('author__username', 'session_date')
-    list_filter = ('session_date',)
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('user', 'date', 'time', 'created_at')
+    list_filter = ('date', 'user')
+    search_fields = ('user__username',)

@@ -6,25 +6,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
-        <h2>{{ form.instance.pk|yesno:'Edit Training Session,Create Training Session' }}</h2>
+        <h2>Confirm Deletion</h2>
+        <p>Are you sure you want to delete the booking on {{ booking.date }} at {{ booking.time }}?</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <form method="post">
           {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Save</button>
+          <button type="submit">Confirm</button>
+          <a href="{% url 'booking_list' %}">Cancel</a>
         </form>
-
-        <a href="{% url 'session_list' %}">Back to list</a>
       </div>
     </div>
   </div>
-{% endblock %}
-
-{% extends 'base.html' %}
-
-{% block content %}
-
 {% endblock %}

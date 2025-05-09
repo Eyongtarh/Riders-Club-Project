@@ -1,19 +1,22 @@
-from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from datetime import date
 
 
-class TrainingSession(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    session_date = models.DateField()
-    session_time = models.TimeField()
-    notes = models.TextField(blank=True, max_length=500)
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('date', 'time')  # Prevent double booking
 
     def clean(self):
-        # Ensure the session date is today or in the future
-        if self.session_date < date.today():
-            raise ValidationError({'session_date': 'Cannot book in the past.'})
+        # Ensure the booking date is today or in the future
+        if self.date < date.today():
+            raise ValidationError({'date': 'Cannot book in the past.'})
 
     def __str__(self):
-        return f"{self.author.username} - {self.session_date}"
+        return f"{self.user.username} - {self.date} at {self.time}"

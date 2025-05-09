@@ -1,16 +1,15 @@
 from django import forms
-from .models import TrainingSession
-from django.core.exceptions import ValidationError
+from .models import Booking
 from datetime import date
 
 
-class TrainingSessionForm(forms.ModelForm):
+class BookingForm(forms.ModelForm):
     class Meta:
-        model = TrainingSession
-        fields = ['session_date', 'session_time', 'notes']
+        model = Booking
+        fields = ['date', 'time']
 
-    def clean_session_date(self):
-        session_date = self.cleaned_data.get('session_date')
-        if session_date and session_date < date.today():
-            raise ValidationError("Cannot book in the past.")
-        return session_date
+    def clean_date(self):
+        date_field = self.cleaned_data['date']
+        if date_field < date.today():
+            raise forms.ValidationError("Cannot book in the past.")
+        return date_field

@@ -6,16 +6,22 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
-        <h2>Delete Training Session</h2>
-        <p>Are you sure you want to delete the session on {{ session.session_date }} at {{ session.session_time }}?</p>
+        <h2>
+          {% if form.instance.pk %}
+            Edit
+          {% else %}
+            Create
+          {% endif %}Booking
+        </h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <form method="post">
           {% csrf_token %}
-          <button type="submit">Yes, delete</button>
-          <a href="{% url 'session_list' %}">Cancel</a>
+          {{ form.as_p }}
+          <button type="submit">Save</button>
+          <a href="{% url 'booking_list' %}">Cancel</a>
         </form>
       </div>
     </div>
