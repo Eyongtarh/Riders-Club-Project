@@ -10,7 +10,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
-        <h2>{{ form.instance.pk|yesno:'New Session' }}</h2>
+        <h2>
+          {% if form.instance.pk %}
+            Edit
+          {% else %}
+            Create
+          {% endif %}Training Session
+        </h2>
       </div>
     </div>
     <div class="row">
@@ -18,8 +24,8 @@
         <form method="post">
           {% csrf_token %}
           {{ form.as_p }}
-          <button type="submit" class="btn btn-success">Save</button>
-          <a href="{% url 'session_list' %}" class="btn btn-secondary">Cancel</a>
+          <button type="submit">Save</button>
+          <a href="{% url 'session_list' %}">Cancel</a>
         </form>
       </div>
     </div>

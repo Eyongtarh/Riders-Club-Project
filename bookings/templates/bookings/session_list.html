@@ -11,14 +11,8 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <div class="d-flex justify-content-between align-items-center mb-3">
-          <h2>Sessions</h2>
-          <h2>
-            {% if form.instance.pk %}
-              Session #{{ form.instance.pk }}
-            {% else %}
-              <a href="{% url 'session_create' %}" class="btn btn-primary">New Session</a>
-            {% endif %}
-          </h2>
+          <h2>Your Training Sessions</h2>
+          <a href="{% url 'session_create' %}">+ Create New Session</a>
         </div>
       </div>
     </div>
@@ -29,12 +23,10 @@
           <ul>
             {% for session in sessions %}
               <li>
-                <strong>{{ session.user }}</strong><br />
-                Date: {{ session.date }}<br />
-                Time: {{ session.time }}<br />
-                Notes: {{ session.notes }}
-                <a href="{% url 'session_update' session.user %}" class="btn btn-sm btn-warning">Edit</a>
-                <a href="{% url 'session_delete' session.user %}" class="btn btn-sm btn-danger">Delete</a>
+                <strong>{{ session.title }}</strong> — {{ session.session_date }} at {{ session.session_time }}
+                <br />
+                <a href="{% url 'session_update' session.pk %}">Edit</a> |
+                <a href="{% url 'session_delete' session.pk %}">Delete</a>
               </li>
             {% empty %}
               <li>No sessions found.</li>
