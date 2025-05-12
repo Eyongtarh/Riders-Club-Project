@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-  Riders Club | Home
-{% endblock %}
-
 {% block content %}
   <div class="container py-5">
     <!-- Hero Section -->
-    <div class="text-center mb-5">
-      <img src="https://example.com/riders-hero.jpg" class="img-fluid rounded mb-4" alt="Riders Club Banner" />
-      <h1 class="display-4 fw-bold">Welcome to Riders Club</h1>
-      <p class="lead">Where your riding journey begins</p>
-      <a href="{% url 'booking_list' %}" class="btn btn-success btn-lg mt-3">Book Your Training</a>
+    <div class="hero-section text-center mb-5">
+      <div class="overlay-content">
+        <h1 class="display-4 fw-bold">Welcome to Riders Club</h1>
+        <p class="lead">Where your riding journey begins</p>
+        <a href="{% url 'booking_list' %}" class="btn btn-success btn-lg mt-3">Book Your Training</a>
+      </div>
     </div>
 
     <hr class="my-5" />
@@ -44,16 +41,17 @@
     </div>
     <div class="row g-3">
       <div class="col-md-4">
-        <img src="https://example.com/gallery1.jpg" class="img-fluid rounded" alt="Rider 1" />
+        <img src="{% static 'images/bicycle.png' %}" class="img-fluid rounded equal-img" alt="Bicycle Rider" />
       </div>
       <div class="col-md-4">
-        <img src="https://example.com/gallery2.jpg" class="img-fluid rounded" alt="Rider 2" />
+        <img src="{% static 'images/mybicycle.png' %}" class="img-fluid rounded equal-img" alt="Bicycle Rider and Child" />
       </div>
       <div class="col-md-4">
-        <img src="https://example.com/gallery3.jpg" class="img-fluid rounded" alt="Rider 3" />
+        <img src="{% static 'images/motorcycle.png' %}" class="img-fluid rounded equal-img" alt="Motorcycle Rider" />
       </div>
     </div>
 
+    <!-- Testimonials Section -->
     <!-- Testimonials Section -->
     <hr class="my-5" />
     <div class="text-center mb-4">
@@ -64,6 +62,14 @@
         <div class="card border-0 shadow-sm">
           <div class="card-body">
             <p class="card-text">"Joining Riders Club was the best decision I made. The trainers are amazing and I've made lifelong friends here!"</p>
+            <div class="mb-2">
+              <!-- Star Rating: 5 Stars -->
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
             <h5 class="card-title mb-0">– Alex R.</h5>
           </div>
         </div>
@@ -72,6 +78,14 @@
         <div class="card border-0 shadow-sm">
           <div class="card-body">
             <p class="card-text">"Great scheduling flexibility and a very supportive community. Highly recommend for beginners and pros alike!"</p>
+            <div class="mb-2">
+              <!-- Star Rating: 4 Stars -->
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+            </div>
             <h5 class="card-title mb-0">– Maria L.</h5>
           </div>
         </div>

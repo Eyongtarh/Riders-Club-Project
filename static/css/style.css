@@ -42,20 +42,6 @@ body {
     color: #666;
   }
 
-  /* Responsive Styles */
-  @media (max-width: 992px) {
-    .navbar-brand {
-      font-size: 1.5rem;
-    }
-
-    .nav-item {
-      margin-left: 1rem;
-    }
-
-    .navbar-text {
-      display: none; /* Hide text on smaller screens */
-    }
-  }
 
  /* end new Styles */
 
@@ -218,3 +204,91 @@ body {
     color: rgb(222, 146, 168);
   }
   
+
+/* hover and after effects to nav and footer links */
+
+.nav-link,
+.footer a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.footer a:hover {
+  color: #28a745; /* green highlight on hover */
+}
+
+.footer i:hover {
+  font-size: x-large;
+}
+
+.nav-link::after,
+.footer a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.footer a:hover::after {
+  width: 100%;
+}
+
+/* active nav link style */
+.nav-link.active {
+  font-weight: bold;
+  color: #28a745;
+}
+
+  /* Home page Hero section */
+
+  .hero-section {
+    background: url("{% static 'images/bicycle.png' %}") no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px; /* Adjust padding as needed */
+    position: relative;
+    color: white; /* Make text readable */
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+    z-index: 1;
+  }
+  
+  .overlay-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .equal-img {
+    height: 400px; /* Set the desired height */
+    width: 100%;   /* Ensure full column width */
+    object-fit: cover; /* Crop image to fill space without distortion */
+  }
+  
+  
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+  
+      .nav-item {
+        margin-left: 1rem;
+      }
+  
+      .navbar-text {
+        display: none; /* Hide text on smaller screens */
+      }
+    }

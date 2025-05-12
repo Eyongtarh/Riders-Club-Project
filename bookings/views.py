@@ -3,14 +3,25 @@ from django.contrib.auth.decorators import login_required
 from .models import Booking
 from .forms import BookingForm
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 @login_required
 def booking_list(request):
     bookings = Booking.objects.filter(user=request.user).order_by('-date',
                                                                   '-time')
+    paginator = Paginator(bookings, 5)  # Show 5 bookings per page
+
+    page = request.GET.get('page')
+    try:
+        bookings_page = paginator.page(page)
+    except PageNotAnInteger:
+        bookings_page = paginator.page(1)
+    except EmptyPage:
+        bookings_page = paginator.page(paginator.num_pages)
+
     return render(request, 'bookings/booking_list.html',
-                  {'bookings': bookings})
+                  {'bookings': bookings_page})
 
 
 @login_required

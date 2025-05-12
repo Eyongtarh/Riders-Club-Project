@@ -2,93 +2,87 @@
 
 {% url 'home' as home_url %}
 {% url 'contact' as contact_url %}
-{% url 'bookings' as session_list_url %}
+{% url 'booking_list' as booking_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html lang="en" class="h-100">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rider Club for Bicycle and Motorcycle Enthusiasts – Training and Community" />
+    <meta name="keywords" content="Riders, Bicycle, Motorcycle, Bike Training, Cycling, Motorbiking, Club" />
     <title>Riders Club</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Session Manager -->
-    <title>
-      {% block title %}
-        Session Manager
-      {% endblock %}
-    </title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}" />
 
-    <!-- Google Fonts CSS -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
 
   <body class="d-flex flex-column h-100 main-bg">
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container-fluid">
-        <!-- Brand Logo and Name -->
-        <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span class="green-nn">Riders</span>Club</span></a>
+        <!-- Brand -->
+        <a class="navbar-brand" href="{{ home_url }}"><span class="brand"><span class="green-nn">Riders</span>Club</span></a>
 
-        <!-- Navbar Toggler (for mobile view) -->
+        <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-        <!-- Navbar Links -->
+        <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- Home Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Home</a>
+              <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
             </li>
-
-            <!-- Contact Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
             </li>
-
-            <!-- Book-Training Link -->
             <li class="nav-item">
-              <a class="nav-link {% if request.path == booking_list_url %}active{% endif %}" href="{% url 'booking_list' %}">Book-Training</a>
+              <a class="nav-link {% if request.path == booking_list_url %}active{% endif %}" href="{{ booking_list_url }}">Book Training</a>
             </li>
-
-            <!-- Authenticated User Links -->
             {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}">Logout</a>
               </li>
             {% else %}
               <li class="nav-item">
-                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
               </li>
             {% endif %}
           </ul>
-
-          <!-- Navbar Text (Optional) -->
-          <span class="navbar-text text-muted d-none d-md-block">Gothenburg Riders</span>
+          <span class="navbar-text text-muted d-none d-md-block">Community for Cyclists & Motorcyclists</span>
         </div>
       </div>
     </nav>
 
+    <!-- Messages -->
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2">
           {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
               {{ message|safe }}
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -96,80 +90,89 @@
         </div>
       </div>
     </div>
+
+    <!-- Main Content -->
     <main class="flex-shrink-0 main-bg">
-      {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
-      {% else %}
-        <p class="text-end m-3">You are not logged in</p>
-      {% endif %}
+      <p class="text-end m-3">
+        {% if user.is_authenticated %}
+          Logged in as {{ user }}
+        {% else %}
+          Not logged in
+        {% endif %}
+      </p>
 
       {% block content %}
-        <!-- Content Goes here -->
+
       {% endblock %}
     </main>
 
     <!-- Footer -->
-    <!-- Footer -->
-    <footer class="footer mt-auto bg-secondary text-white pt-4 pb-3">
-      <div class="container text-center text-md-start">
-        <div class="row">
+    <footer class="footer mt-auto bg-secondary text-white py-4">
+      <div class="container">
+        <div class="row gy-4 text-center text-md-start">
           <!-- About -->
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4">
             <h5 class="text-uppercase">RidersClub</h5>
-            <p class="text-muted">Join the community of riders and book your next training session easily and securely.</p>
+            <p>A place for bicycle and motorcycle riders to connect, train, and grow their riding skills together.</p>
           </div>
 
           <!-- Quick Links -->
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4">
             <h6 class="text-uppercase">Quick Links</h6>
             <ul class="list-unstyled">
               <li>
-                <a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a>
+                <a href="{{ home_url }}" class="text-reset text-decoration-none link-light">Home</a>
               </li>
               <li>
-                <a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact</a>
+                <a href="{{ contact_url }}" class="text-reset text-decoration-none link-light">Contact</a>
               </li>
               <li>
-                <a href="{% url 'booking_list' %}" class="text-white text-decoration-none">Book Training</a>
+                <a href="{{ booking_list_url }}" class="text-reset text-decoration-none link-light">Book Training</a>
               </li>
               {% if user.is_authenticated %}
                 <li>
-                  <a href="{% url 'account_logout' %}" class="text-white text-decoration-none">Logout</a>
+                  <a href="{{ logout_url }}" class="text-reset text-decoration-none link-light">Logout</a>
                 </li>
               {% else %}
                 <li>
-                  <a href="{% url 'account_login' %}" class="text-white text-decoration-none">Login</a>
+                  <a href="{{ login_url }}" class="text-reset text-decoration-none link-light">Login</a>
                 </li>
                 <li>
-                  <a href="{% url 'account_signup' %}" class="text-white text-decoration-none">Register</a>
+                  <a href="{{ signup_url }}" class="text-reset text-decoration-none link-light">Register</a>
                 </li>
               {% endif %}
             </ul>
           </div>
 
           <!-- Social -->
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4">
             <h6 class="text-uppercase">Follow Us</h6>
-            <div>
-              <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
-              <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
-              <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-              <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
-            </div>
+            <ul class="list-inline d-flex justify-content-center justify-content-md-start gap-3">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="X(formerly twitter)"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Copyright -->
-        <div class="text-center mt-3 border-top border-secondary pt-2">
-          <small>&copy; 2025 RidersClub.</small>
+        <!-- Footer Bottom -->
+        <div class="text-center mt-4 pt-3 border-top border-light-subtle">
+          <small class="text-white-50">&copy; 2025 Riders Club</small>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
-    {% block extras %}
-
-    {% endblock %}
   </body>
 </html>
