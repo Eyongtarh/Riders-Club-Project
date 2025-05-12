@@ -3,21 +3,21 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
-        <h2>Confirm Deletion</h2>
-        <p>Are you sure you want to delete the booking on {{ booking.date }} at {{ booking.time }}?</p>
+  <section class="row justify-content-center mb-5 mx-4">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-4">Confirm Deletion</h2>
+          <p class="lead">
+            Are you sure you want to delete the booking on <strong>{{ booking.date }}</strong> at <strong>{{ booking.time }}</strong>?
+          </p>
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Confirm</button>
+          </form>
+          <a href="{% url 'booking_list' %}" class="btn btn-secondary ml-2">Cancel</a>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
-        <form method="post">
-          {% csrf_token %}
-          <button type="submit">Confirm</button>
-          <a href="{% url 'booking_list' %}">Cancel</a>
-        </form>
-      </div>
-    </div>
-  </div>
+  </section>
 {% endblock %}
