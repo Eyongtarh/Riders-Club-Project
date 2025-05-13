@@ -27,10 +27,6 @@ body {
   color: #4caf50;
 }
 
-.navbar-brand {
-  font-weight: lighter;
-}
-
 .nav-item {
   margin-left: 1.5rem;
 }
@@ -55,12 +51,13 @@ body {
 /* hover and after effects to nav and footer links */
 
 .nav-link,
-.footer i {
+.text-reset {
   position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.text-reset {
   color: #28a745;
 }
 
@@ -68,7 +65,8 @@ body {
   font-size: x-large;
 }
 
-.nav-link::after {
+.nav-link::after, 
+.text-reset::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -79,7 +77,8 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after, 
+.text-reset:hover::after{
   width: 100%;
 }
 
@@ -117,7 +116,7 @@ body {
   object-fit: cover;
 }
 
- /* Sign up, logout btn */
+ /* btn-signup class */
 
  .btn-signup {
   background-color: #0000ff;
