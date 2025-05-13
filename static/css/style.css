@@ -1,229 +1,74 @@
+ /* General styles */
+ 
 body {
-    background-color: #F9FAFC;
-  }
+  background-color: #F9FAFC;
+}
 
-  /* start new Styles */
+.brand {
+  font-family: Lato, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4A4A4F;
+}
 
-  .navbar {
-    padding: 1rem 2rem;
-  }
+/*nav Styles */
 
-  .navbar-brand {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #333;
-  }
+.navbar {
+  padding: 1rem 2rem;
+}
 
-  .navbar-brand .green-nn {
-    color: #4caf50; /* Green color for Riders */
-  }
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #333;
+}
 
-  .navbar-brand {
-    font-weight: lighter;
-  }
+.navbar-brand .green-nn {
+  color: #4caf50;
+}
 
-  .nav-item {
-    margin-left: 1.5rem;
-  }
+.navbar-brand {
+  font-weight: lighter;
+}
 
-  .nav-link {
-    font-size: 1.1rem;
-    color: #555;
-    transition: color 0.3s ease;
-  }
+.nav-item {
+  margin-left: 1.5rem;
+}
 
-  .nav-link:hover,
-  .nav-link.active {
-    color: #4caf50; /* Green color on hover or active */
-  }
-
-  .navbar-text {
-    font-size: 1rem;
-    color: #666;
-  }
-
-
- /* end new Styles */
-
-  .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-  }
-  
-  .green-nn {
-    color: #08b731;
-  }
-  
-  .light-bg {
-    background-color: #fff;
-  }
-  
-  .dark-bg {
-    background-color: #445261;
-  }
-  
-  .main-bg {
-    background-color: #F9FAFC;
-  }
-  
-  .card {
-    border: none;
-    background-color: transparent;
-  }
-  
-  .image-container {
-    position: relative;
-  }
-  
-  .image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-  }
-  
-  .scale {
-    width: 100%;
-    height: auto;
-  }
-  
-  .author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-  }
-  
-  .masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-  }
-  
-  .masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-  }
-  
-  .masthead-image {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-  }
-  
-  
-  .profile-image {
-    width: 60%;
-  }
-  
-  .post-link {
-    text-decoration: none;
-    color: #445261;
-  }
-  
-  .post-link:hover,
-  .page-link {
-    color: #E84610;
-  }
-  
-  .post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-  }
-  
-  .post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-  }
-  
-  .btn-signup,
-  .btn-edit {
-    background-color: #188181;
-    color: #fff;
-  }
-  
-  .btn-signup:hover,
-  .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-  }
-  
-  .link {
-    color: #23BBBB;
-    text-decoration: none;
-  }
-  
-  .link:hover,
-  .link:active {
-    color: #445261;
-    text-decoration: underline;
-  }
-  
-  .btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-  }
-  
-  .btn-delete {
-    color: #fff;
-    background: #E84610;
-  }
-  
-  .btn-like:hover,
-  .btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-  }
-  
-  .faded {
-    color: rgb(172, 175, 175);
-  }
-  
-  .approval {
-    color: rgb(222, 146, 168);
-  }
-  
-
-/* hover and after effects to nav and footer links */
-
-.nav-link,
-.footer a {
-  position: relative;
+.nav-link {
+  font-size: 1.1rem;
+  color: #555;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover,
-.footer a:hover {
-  color: #28a745; /* green highlight on hover */
+.nav-link.active {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.navbar-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* hover and after effects to nav and footer links */
+
+.nav-link,
+.footer i {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #28a745;
 }
 
 .footer i:hover {
   font-size: x-large;
 }
 
-.nav-link::after,
-.footer a::after {
+.nav-link::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -234,61 +79,65 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after,
-.footer a:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
-/* active nav link style */
-.nav-link.active {
-  font-weight: bold;
-  color: #28a745;
+/* Home page Hero section */
+
+.hero-section {
+  background: url("{% static 'images/bicycle.png' %}") no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  position: relative;
+  color: white;
 }
 
-  /* Home page Hero section */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
 
-  .hero-section {
-    background: url("{% static 'images/bicycle.png' %}") no-repeat center center;
-    background-size: cover;
-    padding: 100px 20px; /* Adjust padding as needed */
-    position: relative;
-    color: white; /* Make text readable */
-  }
-  
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Transparent overlay */
-    z-index: 1;
-  }
-  
-  .overlay-content {
-    position: relative;
-    z-index: 2;
+.overlay-content {
+  position: relative;
+  z-index: 2;
+}
+
+.equal-img {
+  height: 400px;
+  width: 100%;  
+  object-fit: cover;
+}
+
+ /* Sign up, logout btn */
+
+ .btn-signup {
+  background-color: #008000;
+  color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+  background-color: #fff;
+  color: #008000;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.5rem;
   }
 
-  .equal-img {
-    height: 400px; /* Set the desired height */
-    width: 100%;   /* Ensure full column width */
-    object-fit: cover; /* Crop image to fill space without distortion */
+  .nav-item {
+    margin-left: 1rem;
   }
-  
-  
 
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .navbar-brand {
-        font-size: 1.5rem;
-      }
-  
-      .nav-item {
-        margin-left: 1rem;
-      }
-  
-      .navbar-text {
-        display: none; /* Hide text on smaller screens */
-      }
-    }
+  .navbar-text {
+    display: none;
+  }
+}
