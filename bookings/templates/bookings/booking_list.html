@@ -9,7 +9,7 @@
         <div class="col-md-8">
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="mb-0">Your Bookings</h2>
-            <a href="{% url 'booking_create' %}" class="btn btn-primary">Create New Booking</a>
+            <a href="{% url 'booking_create' %}" class="btn btn-signup">Create New Booking</a>
           </div>
 
           {% if bookings %}
@@ -33,7 +33,7 @@
           <!-- Pagination Section -->
           <div class="mt-4 flex items-center justify-between text-sm text-gray-700">
             {% if bookings.has_previous %}
-              <a href="?page={{ bookings.previous_page_number }}" class="btn btn-success btn-sm">Previous</a>
+              <a href="?page={{ bookings.previous_page_number }}" class="btn btn-signup btn-sm">Previous</a>
             {% else %}
               <span class="btn btn-secondary btn-sm">Previous</span>
             {% endif %}
@@ -41,7 +41,7 @@
             <span class="mx-2">Page {{ bookings.number }} of {{ bookings.paginator.num_pages }}</span>
 
             {% if bookings.has_next %}
-              <a href="?page={{ bookings.next_page_number }}" class="btn btn-success btn-sm">Next</a>
+              <a href="?page={{ bookings.next_page_number }}" class="btn btn-signup btn-sm">Next</a>
             {% else %}
               <span class="btn btn-secondary btn-sm">Next</span>
             {% endif %}

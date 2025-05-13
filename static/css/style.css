@@ -86,12 +86,15 @@ body {
 /* Home page Hero section */
 
 .hero-section {
-  background: url("{% static 'images/bicycle.png' %}") no-repeat center center;
+  background: url("/static/images/riders.png") no-repeat center center;
   background-size: cover;
   padding: 100px 20px;
   position: relative;
   color: white;
+  border-radius: 20px;
+  overflow: hidden;
 }
+
 
 .hero-section::before {
   content: "";
@@ -117,14 +120,14 @@ body {
  /* Sign up, logout btn */
 
  .btn-signup {
-  background-color: #008000;
+  background-color: #0000ff;
   color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-  background-color: #fff;
-  color: #008000;
+  background-color: #008000;
+  color: #fff;
 }
 
 /* Responsive Styles */

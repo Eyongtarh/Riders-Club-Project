@@ -8,7 +8,7 @@
         <h3>{% trans 'Sign In' %}</h3>
 
         <p>
-          {% blocktrans %}Welcome back to the Riders Club. To book a session, please log in. If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+          {% blocktrans %}Welcome back to the Riders Club. To book a session, please log in. If you have not created an account yet, then <a class="btn btn-signup btn-sm" href="{{ signup_url }}">sign up</a>
           first.{% endblocktrans %}
         </p>
       </div>
@@ -19,7 +19,7 @@
           {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button class="btn btn-signup right" type="submit">{% trans 'Sign In' %}</button>
+          <button class="btn btn-signup btn-sm right" type="submit">{% trans 'Sign In' %}</button>
         </form>
       </div>
     </div>
