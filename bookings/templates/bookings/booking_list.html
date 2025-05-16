@@ -7,11 +7,12 @@
     <div class="container py-4">
       <div class="row justify-content-center">
         <div class="col-md-8">
+          <!-- Create Bookings Section -->
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="mb-0">Your Bookings</h2>
             <a href="{% url 'booking_create' %}" class="btn btn-signup">Create New Booking</a>
           </div>
-
+          <!-- Existing Bookings Section -->
           {% if bookings %}
             <ul class="list-group">
               {% for booking in bookings %}
@@ -26,26 +27,24 @@
                 </li>
               {% endfor %}
             </ul>
+
+            <!-- Pagination Section -->
+            {% if bookings.paginator.num_pages > 1 %}
+              <div class="mt-4 flex items-center justify-between text-sm text-gray-700">
+                {% if bookings.has_previous %}
+                  <a href="?page={{ bookings.previous_page_number }}" class="btn btn-signup btn-sm">Previous</a>
+                {% endif %}
+
+                <span class="mx-2">Page {{ bookings.number }} of {{ bookings.paginator.num_pages }}</span>
+
+                {% if bookings.has_next %}
+                  <a href="?page={{ bookings.next_page_number }}" class="btn btn-signup btn-sm">Next</a>
+                {% endif %}
+              </div>
+            {% endif %}
           {% else %}
             <div class="alert alert-info" role="alert">No bookings found.</div>
           {% endif %}
-
-          <!-- Pagination Section -->
-          <div class="mt-4 flex items-center justify-between text-sm text-gray-700">
-            {% if bookings.has_previous %}
-              <a href="?page={{ bookings.previous_page_number }}" class="btn btn-signup btn-sm">Previous</a>
-            {% else %}
-              <span class="btn btn-secondary btn-sm">Previous</span>
-            {% endif %}
-
-            <span class="mx-2">Page {{ bookings.number }} of {{ bookings.paginator.num_pages }}</span>
-
-            {% if bookings.has_next %}
-              <a href="?page={{ bookings.next_page_number }}" class="btn btn-signup btn-sm">Next</a>
-            {% else %}
-              <span class="btn btn-secondary btn-sm">Next</span>
-            {% endif %}
-          </div>
         </div>
       </div>
     </div>

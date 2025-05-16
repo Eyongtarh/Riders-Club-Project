@@ -61,9 +61,15 @@ body {
   color: #28a745;
 }
 
-.footer i:hover {
-  font-size: x-large;
-}
+  .list-inline .list-inline-item i {
+    transition: color 0.3s ease;
+    padding: 5px;
+    font-size: x-large;
+  }
+
+  .list-inline .list-inline-item i:hover {
+    color: #0000ff;
+  }
 
 .nav-link::after, 
 .text-reset::after {
