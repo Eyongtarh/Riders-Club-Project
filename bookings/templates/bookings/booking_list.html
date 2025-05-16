@@ -9,12 +9,10 @@
         <div class="col-md-8">
           <!-- Create Bookings Section -->
           <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="lead">Welcome to the Booking System</h1>
-            <a href="{% url 'bookings:booking_list' %}">Bookings</a>
-            <a href="{% url 'bookings:booking_create' %}">Create Booking</a>
             <h2 class="mb-0">Your Bookings</h2>
-            <a href="{% url 'bookings:booking_create' %}" class="btn btn-signup">Create New Booking</a>
+            <a href="{% url 'bookings:booking_create' %}">Create New Booking</a>
           </div>
+
           <!-- Existing Bookings Section -->
           <table>
             <thead>
@@ -37,26 +35,40 @@
                     <a href="{% url 'bookings:booking_delete' booking.pk %}">Delete</a>
                   </td>
                 </tr>
+              {% empty %}
+                <tr>
+                  <td colspan="4">No bookings available.</td>
+                </tr>
               {% endfor %}
             </tbody>
           </table>
 
-          <!-- Pagination Section -->
-          {% if bookings.paginator.num_pages > 1 %}
-            <div class="mt-4 flex items-center justify-between text-sm text-gray-700">
-              {% if bookings.has_previous %}
-                <a href="?page={{ bookings.previous_page_number }}" class="btn btn-signup btn-sm">Previous</a>
-              {% endif %}
+          {% if is_paginated and page_obj.paginator.count > 0 %}
+            <div aria-label="Page navigation" class="mt-4">
+              <ul class="pagination flex items-center justify-between">
+                {% if page_obj.has_previous %}
+                  <li class="page-item">
+                    <a class="page-link" href="?page=1">&laquo; First</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                  </li>
+                {% endif %}
 
-              <span class="mx-2">Page {{ bookings.number }} of {{ bookings.paginator.num_pages }}</span>
+                <li class="page-item disabled">
+                  <span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                </li>
 
-              {% if bookings.has_next %}
-                <a href="?page={{ bookings.next_page_number }}" class="btn btn-signup btn-sm">Next</a>
-              {% endif %}
+                {% if page_obj.has_next %}
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                  </li>
+                {% endif %}
+              </ul>
             </div>
-          {% endif %}
-          {% else %}
-          <div class="alert alert-info" role="alert">No bookings found.</div>
           {% endif %}
         </div>
       </div>

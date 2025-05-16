@@ -2,7 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'contact' as contact_url %}
-{% url 'booking_list' as booking_list_url %}
+{% url 'bookings:booking_list' as booking_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -58,7 +58,7 @@
               <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}" aria-label="Contact page">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.path == booking_list_url %}active{% endif %}" href="{{ booking_list_url }}" aria-label="Book Training page">Book Training</a>
+              <a class="nav-link {% if request.resolver_match.url_name == 'booking_list' and request.resolver_match.namespace == 'bookings' %}active{% endif %}" href="{% url 'bookings:booking_list' %}" aria-label="Book Training page">Book Training</a>
             </li>
             {% if user.is_authenticated %}
               <li class="nav-item">
