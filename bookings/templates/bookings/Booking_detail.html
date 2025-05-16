@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <section class="row justify-content-center mb-5 mx-4">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h1 class="lead">Welcome to the Booking System</h1>
+
+          <a href="{% url 'bookings:booking_list' %}">Bookings</a>
+          <a href="{% url 'bookings:booking_create' %}">Create Booking</a>
+
+          <h2>Booking Details</h2>
+          <p>
+            <strong>Slot:</strong> {{ booking.slot }}
+          </p>
+          <p>
+            <strong>Status:</strong> {{ booking.get_status_display }}
+          </p>
+          <p>
+            <strong>Notes:</strong> {{ booking.notes }}
+          </p>
+          <p>
+            <strong>Created At:</strong> {{ booking.created_at }}
+          </p>
+          <a href="{% url 'bookings:booking_update' booking.pk %}">Edit</a> |
+          <a href="{% url 'bookings:booking_delete' booking.pk %}">Delete</a> |
+          <a href="{% url 'bookings:booking_list' %}">Back to Bookings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

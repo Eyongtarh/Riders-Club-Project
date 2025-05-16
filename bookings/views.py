@@ -1,64 +1,56 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.views.generic import (
+    ListView, DetailView,
+    CreateView, UpdateView, DeleteView
+)
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Booking
 from .forms import BookingForm
-from django.contrib import messages
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-@login_required
-def booking_list(request):
-    bookings = Booking.objects.filter(user=request.user).order_by('-date',
-                                                                  '-time')
-    paginator = Paginator(bookings, 5)  # Show 5 bookings per page
+class BookingListView(LoginRequiredMixin, ListView):
+    model = Booking
+    context_object_name = 'bookings'
+    template_name = 'bookings/booking_list.html'
 
-    page = request.GET.get('page')
-    try:
-        bookings_page = paginator.page(page)
-    except PageNotAnInteger:
-        bookings_page = paginator.page(1)
-    except EmptyPage:
-        bookings_page = paginator.page(paginator.num_pages)
-
-    return render(request, 'bookings/booking_list.html',
-                  {'bookings': bookings_page})
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
 
 
-@login_required
-def booking_create(request):
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            messages.success(request, "Booking created successfully.")
-            return redirect('booking_list')
-    else:
-        form = BookingForm()
-    return render(request, 'bookings/booking_form.html', {'form': form})
+class BookingDetailView(LoginRequiredMixin, DetailView):
+    model = Booking
+    context_object_name = 'booking'
+    template_name = 'bookings/booking_detail.html'
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
 
 
-@login_required
-def booking_update(request, pk):
-    booking = get_object_or_404(Booking, pk=pk, user=request.user)
-    if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Booking updated successfully.")
-            return redirect('booking_list')
-    else:
-        form = BookingForm(instance=booking)
-    return render(request, 'bookings/booking_form.html', {'form': form})
+class BookingCreateView(LoginRequiredMixin, CreateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'bookings/booking_form.html'
+    success_url = reverse_lazy('bookings:booking_list')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
-@login_required
-def booking_delete(request, pk):
-    booking = get_object_or_404(Booking, pk=pk, user=request.user)
-    if request.method == 'POST':
-        booking.delete()
-        messages.success(request, "Booking deleted.")
-        return redirect('booking_list')
-    return render(request,
-                  'bookings/booking_confirm_delete.html', {'booking': booking})
+class BookingUpdateView(LoginRequiredMixin, UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'bookings/booking_form.html'
+    success_url = reverse_lazy('bookings:booking_list')
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
+
+
+class BookingDeleteView(LoginRequiredMixin, DeleteView):
+    model = Booking
+    template_name = 'bookings/booking_confirm_delete.html'
+    success_url = reverse_lazy('bookings:booking_list')
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
