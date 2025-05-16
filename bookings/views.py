@@ -13,7 +13,7 @@ class BookingListView(LoginRequiredMixin, ListView):
     model = Booking
     context_object_name = 'bookings'
     template_name = 'bookings/booking_list.html'
-    paginate_by = 3
+    paginate_by = 5
 
     def get_queryset(self):
         return self.model.objects.filter(user=self.request.user)

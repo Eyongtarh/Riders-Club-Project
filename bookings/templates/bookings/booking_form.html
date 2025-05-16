@@ -3,28 +3,20 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <section class="row justify-content-center mb-5 mx-4">
+  <section class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2>
-          {% if object %}
-            Update
-          {% else %}
-            Create
-          {% endif %}Booking
-        </h2>
-        <form method="post">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <h2 class="mb-4">{{ object|yesno:'Update,Create' }} Booking</h2>
+
+        <form method="post" novalidate>
           {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">
-            {% if object %}
-              Update
-            {% else %}
-              Create
-            {% endif %}Booking
-          </button>
+          {{ form|crispy }}
+
+          <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-signup btn-sm">{{ object|yesno:'Update,Create' }} Booking</button>
+            <a href="{% url 'bookings:booking_list' %}" class="btn btn-outline-danger btn-sm" aria-label="Cancel booking">Cancel</a>
+          </div>
         </form>
-        <a href="{% url 'bookings:booking_list' %}">Cancel</a>
       </div>
     </div>
   </section>
