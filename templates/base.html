@@ -122,24 +122,24 @@
             <h6 class="text-uppercase">Quick Links</h6>
             <ul class="list-unstyled">
               <li>
-                <a href="{{ home_url }}" class="text-reset text-decoration-none link-light">Home</a>
+                <a href="{{ home_url }}" class="text-reset text-decoration-none link-light" aria-label="footer home page link">Home</a>
               </li>
               <li>
-                <a href="{{ contact_url }}" class="text-reset text-decoration-none link-light">Contact</a>
+                <a href="{{ contact_url }}" class="text-reset text-decoration-none link-light" aria-label="footer contact page link">Contact</a>
               </li>
               <li>
-                <a href="{{ booking_list_url }}" class="text-reset text-decoration-none link-light">Book Training</a>
+                <a href="{{ booking_list_url }}" class="text-reset text-decoration-none link-light" aria-label="footer booking page link">Book Training</a>
               </li>
               {% if user.is_authenticated %}
                 <li>
-                  <a href="{{ logout_url }}" class="text-reset text-decoration-none link-light">Logout</a>
+                  <a href="{{ logout_url }}" class="text-reset text-decoration-none link-light" aria-label="footer logout link">Logout</a>
                 </li>
               {% else %}
                 <li>
-                  <a href="{{ login_url }}" class="text-reset text-decoration-none link-light">Login</a>
+                  <a href="{{ login_url }}" class="text-reset text-decoration-none link-light" aria-label="footer Login link">Login</a>
                 </li>
                 <li>
-                  <a href="{{ signup_url }}" class="text-reset text-decoration-none link-light">Register</a>
+                  <a href="{{ signup_url }}" class="text-reset text-decoration-none link-light" aria-label="footer Register account link">Register</a>
                 </li>
               {% endif %}
             </ul>
