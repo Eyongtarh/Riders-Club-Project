@@ -61,13 +61,12 @@ body {
   color: #28a745;
 }
 
-.list-inline .list-inline-item a i {
-    transition: 0.3s ease;
+/* Media Icons */
+.custom-icon:hover {
+  color: #0000ff;
+  transition: color 0.3s ease;
 }
 
-.list-inline .list-inline-item a i:hover {
-    color: #0000ff;
-}
 
 .nav-link::after, 
 .text-reset::after {
@@ -133,7 +132,7 @@ body {
   color: #fff;
 }
 
-/* Error for non_field_errors */
+/* Error message style for non_field_error */
 .invalid-feedback {
   display: flex;
   align-items: center;

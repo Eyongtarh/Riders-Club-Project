@@ -3,21 +3,23 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="container mt-5">
-    <!-- Contact Content Section -->
-    <section class="row mb-5">
-      <div class="col-12 col-md-8">
-        <h2 class="text-success">{{ contact.title }}</h2>
-        <div class="text-primary">{{ contact.content|safe }}</div>
-      </div>
-    </section>
+  <section class="row justify-content-center mb-5 mx-2 mx-md-4">
+    <div class="container mt-5">
+      <!-- Contact Content Section -->
+      <section class="row mb-5">
+        <div class="col-12 col-md-8">
+          <h2 class="text-success">{{ contact.title }}</h2>
+          <div class="text-primary">{{ contact.content|safe }}</div>
+        </div>
+      </section>
 
-    <!-- Thank You Message Section -->
-    <section class="row justify-content-center">
-      <div class="col-12 col-md-6 text-center">
-        <h1 class="mb-3 text-success">Thank You for Contacting Us!</h1>
-        <p>Your message has been successfully sent. We will get back to you soon.</p>
-      </div>
-    </section>
-  </div>
+      <!-- Thank You Message Section -->
+      <section class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <h1 class="mb-3 text-success">Thank You for Contacting Us!</h1>
+          <p>Your message has been successfully sent. We will get back to you soon.</p>
+        </div>
+      </section>
+    </div>
+  </section>
 {% endblock %}
