@@ -39,59 +39,60 @@
   </head>
 
   <body class="d-flex flex-column h-100 main-bg">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand" href="{{ home_url }}" aria-label="logo link to home page"><span class="brand"><span class="green-nn">Riders</span>Club</span></a>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+          <!-- Brand -->
+          <a class="navbar-brand" href="{{ home_url }}" aria-label="logo link to home page"><span class="brand"><span class="green-nn">Riders</span>Club</span></a>
 
-        <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}" aria-label="Home page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}" aria-label="Contact page">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'booking_list' and request.resolver_match.namespace == 'bookings' %}active{% endif %}" href="{% url 'bookings:booking_list' %}" aria-label="Book Training page">Book Training</a>
-            </li>
-            {% if user.is_authenticated %}
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}" aria-label="Logout pagr">Logout</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}" aria-label="Register page">Register</a>
+                <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}" aria-label="Home page">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" aria-label="Login page">Login</a>
+                <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}" aria-label="Contact page">Contact</a>
               </li>
-            {% endif %}
-          </ul>
-          <span class="navbar-text text-muted d-none d-md-block">Community for Cyclists & Motorcyclists</span>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'booking_list' and request.resolver_match.namespace == 'bookings' %}active{% endif %}" href="{% url 'bookings:booking_list' %}" aria-label="Book Training page">Book Training</a>
+              </li>
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}" aria-label="Logout page">Logout</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}" aria-label="Register page">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" aria-label="Login page">Login</a>
+                </li>
+              {% endif %}
+            </ul>
+            <span class="navbar-text text-muted d-none d-md-block">Community for Cyclists & Motorcyclists</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Messages -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+              <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message|safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Messages -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-          {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
-              {{ message|safe }}
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
+    </header>
     <!-- Main Content -->
     <main class="flex-shrink-0 main-bg">
       <p class="text-end m-3">
@@ -150,16 +151,16 @@
             <h6 class="text-uppercase">Follow Us</h6>
             <ul class="list-inline d-flex justify-content-center justify-content-md-start gap-3">
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook custom-icon"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Go to our Facebook page"><i class="fab fa-facebook custom-icon"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="X(formerly twitter)"><i class="fab fa-twitter custom-icon"></i></a>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Go to our X(formerly twitter) page"><i class="fab fa-twitter custom-icon"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram custom-icon"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Go to our Instagram page"><i class="fab fa-instagram custom-icon"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="YouTube"><i class="fab fa-youtube custom-icon"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Go to our YouTube page"><i class="fab fa-youtube custom-icon"></i></a>
               </li>
             </ul>
           </div>

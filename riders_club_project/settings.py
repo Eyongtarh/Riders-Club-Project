@@ -5,17 +5,19 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
+
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 
-# Application definition
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -35,12 +37,15 @@ INSTALLED_APPS = [
     'bookings',
 ]
 
+
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +59,9 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+
 ROOT_URLCONF = 'riders_club_project.urls'
+
 
 TEMPLATES = [
     {
@@ -71,22 +78,20 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'riders_club_project.wsgi.application'
+
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
 ]
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
-
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -115,10 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -128,6 +132,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert alert-secondary',
     messages.INFO: 'alert alert-info',
@@ -136,15 +141,11 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert alert-danger',
 }
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
