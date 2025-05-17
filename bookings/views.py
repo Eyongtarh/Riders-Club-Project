@@ -10,6 +10,11 @@ from .forms import BookingForm
 
 
 class BookingListView(LoginRequiredMixin, ListView):
+    """
+    View that displays a list of bookings for the logged-in user.
+    Only bookings belonging to the user will be shown.
+    Pagination is enabled to show 5 bookings per page.
+    """
     model = Booking
     context_object_name = 'bookings'
     template_name = 'bookings/booking_list.html'
@@ -20,6 +25,11 @@ class BookingListView(LoginRequiredMixin, ListView):
 
 
 class BookingDetailView(LoginRequiredMixin, DetailView):
+    """
+    View that displays the details of a specific booking
+    for the logged-in user.
+    Only bookings belonging to the user will be shown.
+    """
     model = Booking
     context_object_name = 'booking'
     template_name = 'bookings/booking_detail.html'
@@ -29,6 +39,11 @@ class BookingDetailView(LoginRequiredMixin, DetailView):
 
 
 class BookingCreateView(LoginRequiredMixin, CreateView):
+    """
+    View that handles the creation of a new booking.
+    The user will automatically be set as the creator of the booking.
+    Upon successful creation, a success message is displayed.
+    """
     model = Booking
     form_class = BookingForm
     template_name = 'bookings/booking_form.html'
@@ -47,6 +62,11 @@ class BookingCreateView(LoginRequiredMixin, CreateView):
 
 
 class BookingUpdateView(LoginRequiredMixin, UpdateView):
+    """
+    View that handles the update of an existing booking.
+    Only bookings belonging to the logged-in user can be updated.
+    A success message is displayed upon successful update.
+    """
     model = Booking
     form_class = BookingForm
     template_name = 'bookings/booking_form.html'
@@ -67,6 +87,11 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
 
 
 class BookingDeleteView(LoginRequiredMixin, DeleteView):
+    """
+    View that handles the deletion of a booking.
+    Only bookings belonging to the logged-in user can be deleted.
+    A success message is displayed upon successful deletion.
+    """
     model = Booking
     template_name = 'bookings/booking_confirm_delete.html'
     success_url = reverse_lazy('bookings:booking_list')
