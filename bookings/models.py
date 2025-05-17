@@ -67,9 +67,9 @@ class Booking(models.Model):
         CONFIRMED: The booking has been confirmed.
         CANCELLED: The booking has been cancelled.
         """
-        PENDING = 0, 'Pending'
-        CONFIRMED = 1, 'Confirmed'
-        CANCELLED = 2, 'Cancelled'
+        PENDING = 0,
+        CONFIRMED = 1,
+        CANCELLED = 2,
 
     user = models.ForeignKey(User, on_delete=models.CASCADE,
                              related_name='bookings')
