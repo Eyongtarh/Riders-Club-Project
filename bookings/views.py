@@ -11,8 +11,8 @@ from .forms import BookingForm
 
 class BookingListView(LoginRequiredMixin, ListView):
     """
-    View that displays a list of bookings for the logged-in user.
-    Only bookings belonging to the user will be shown.
+    This displays a list of bookings for the logged-in user
+    and only bookings belonging to the user.
     Pagination is enabled to show 5 bookings per page.
     """
     model = Booking
@@ -26,9 +26,9 @@ class BookingListView(LoginRequiredMixin, ListView):
 
 class BookingDetailView(LoginRequiredMixin, DetailView):
     """
-    View that displays the details of a specific booking
-    for the logged-in user.
-    Only bookings belonging to the user will be shown.
+    Here, it displays the details of a specific booking
+    for the logged-in user and only bookings belonging to
+    the user will be shown.
     """
     model = Booking
     context_object_name = 'booking'
@@ -40,9 +40,9 @@ class BookingDetailView(LoginRequiredMixin, DetailView):
 
 class BookingCreateView(LoginRequiredMixin, CreateView):
     """
-    View that handles the creation of a new booking.
-    The user will automatically be set as the creator of the booking.
-    Upon successful creation, a success message is displayed.
+    This handles the creation of a new booking and the user will automatically
+    be set as the creator of the booking, if positive, a success message is
+    displayed.
     """
     model = Booking
     form_class = BookingForm
@@ -63,9 +63,9 @@ class BookingCreateView(LoginRequiredMixin, CreateView):
 
 class BookingUpdateView(LoginRequiredMixin, UpdateView):
     """
-    View that handles the update of an existing booking.
-    Only bookings belonging to the logged-in user can be updated.
-    A success message is displayed upon successful update.
+    This takes care of update of an existing booking and only bookings
+    belonging to the logged-in user can be updated as well as a success
+    message is displayed upon successful update.
     """
     model = Booking
     form_class = BookingForm
@@ -88,9 +88,9 @@ class BookingUpdateView(LoginRequiredMixin, UpdateView):
 
 class BookingDeleteView(LoginRequiredMixin, DeleteView):
     """
-    View that handles the deletion of a booking.
-    Only bookings belonging to the logged-in user can be deleted.
-    A success message is displayed upon successful deletion.
+    The code here careters for deletion of a booking. Only bookings belonging
+    to the logged-in user can be deleted and success message is displayed
+    upon successful deletion.
     """
     model = Booking
     template_name = 'bookings/booking_confirm_delete.html'

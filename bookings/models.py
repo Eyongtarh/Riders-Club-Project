@@ -6,19 +6,14 @@ from django.utils import timezone
 
 class AvailableSlot(models.Model):
     """
-    Represents an available booking slot for a user. This includes the date,
-    time, and location of the slot. The slot is unique based on these three
-    fields.
+    This represents an available booking slot for a user. This includes
+    the date, time, and location of the slot. The slot is unique based
+    on these three fields.
 
-    Attributes:
-        date (DateField): The date of the available slot.
-        time (TimeField): The time of the available slot.
-        location (CharField): The location where the slot is available.
+    The Meta class constraints (UniqueConstraint) ensures no two slots have the
+    same date, time, and location.
 
-    Meta:
-        constraints (UniqueConstraint): Ensures no two slots have the
-        same date, time, and location.
-        ordering (list): Orders slots first by date, then by time.
+    The ordering, orders slots first by date, then by time.
     """
     date = models.DateField()
     time = models.TimeField()
@@ -34,38 +29,22 @@ class AvailableSlot(models.Model):
         ordering = ['date', 'time']
 
     def __str__(self):
-        """
-        Returns a string representation of the AvailableSlot instance,
-        combining the date, time, and location.
-        """
         return f"{self.date} at {self.time} in {self.location}"
 
 
 class Booking(models.Model):
     """
-    Represents a booking made by a user for a specific available slot.
+    This outlays a booking made by a user for a specific available slot.
     It includes the status of the booking, user, notes, and the related slot.
 
-    Attributes:
-        user (ForeignKey): The user who made the booking.
-        slot (ForeignKey): The available slot that is being booked.
-        notes (TextField): Optional additional notes for the booking.
-        created_at (DateTimeField): The timestamp when the booking was created.
-        status (IntegerField): The current status of the booking (pending,
-        confirmed, or cancelled).
+    The constraints (UniqueConstraint) here verifies that a user can only
+    book a specific slot once.
 
-    Meta:
-        constraints (UniqueConstraint): Ensures a user can only book a
-        specific slot once. ordering (list): Orders bookings by creation
-        date in descending order.
+    The ordering (list), orders bookings by creation date in descending order.
     """
     class Status(models.IntegerChoices):
         """
-        Defines the possible statuses of a booking.
-
-        PENDING: The booking is pending confirmation.
-        CONFIRMED: The booking has been confirmed.
-        CANCELLED: The booking has been cancelled.
+        This defines the possible statuses of a booking.
         """
         PENDING = 0,
         CONFIRMED = 1,
@@ -91,21 +70,16 @@ class Booking(models.Model):
 
     def clean(self):
         """
-        Custom validation for the booking instance. Checks that:
+        This validation checks that:
         1. The slot date is not in the past.
         2. The slot is not already booked by another user.
         """
         if self.slot.date < timezone.now().date():
             raise ValidationError({'slot': 'Cannot book a past slot.'})
 
-        # Check if slot is already booked
         if Booking.objects.filter(slot=self.slot).exclude(pk=self.pk).exists():
             raise ValidationError({'slot':
                                    'This slot has already been booked.'})
 
     def __str__(self):
-        """
-        Returns a string representation of the Booking instance,
-        combining the user's username and the slot details.
-        """
         return f"{self.user.username} - {self.slot}"

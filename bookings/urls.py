@@ -1,6 +1,12 @@
 from django.urls import path
 from . import views
 
+"""
+This module defines the URL pattern for accessing bookingListView,
+bookingCreateView, bookingDetailView, bookingUpdateView, and
+BookingDeleteView
+"""
+
 app_name = 'bookings'
 
 urlpatterns = [
