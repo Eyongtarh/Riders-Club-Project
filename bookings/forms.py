@@ -17,10 +17,3 @@ class BookingForm(forms.ModelForm):
             'notes': forms.Textarea(attrs={'rows': 3}),
             'status': forms.Select(),
         }
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['slot'].required = True
-        self.fields['slot'].error_messages = {
-            'required': 'Please select an available slot.'
-        }

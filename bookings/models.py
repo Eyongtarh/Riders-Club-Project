@@ -69,7 +69,7 @@ class Booking(models.Model):
         1. The slot date is not in the past.
         2. The slot is not already booked by another user.
         """
-        if not self.slot:
+        if self.slot_id is None:
             raise ValidationError({'slot':
                                    'A booking must have a valid slot.'})
 
