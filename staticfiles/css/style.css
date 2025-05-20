@@ -37,7 +37,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-link:hover,
 .nav-link.active {
   font-weight: bold;
   color: #4caf50;
@@ -61,13 +60,6 @@ body {
   color: #28a745;
 }
 
-/* Media Icons */
-.custom-icon:hover {
-  color: #0000ff;
-  transition: color 0.3s ease;
-}
-
-
 .nav-link::after, 
 .text-reset::after {
   content: "";
@@ -83,6 +75,12 @@ body {
 .nav-link:hover::after, 
 .text-reset:hover::after{
   width: 100%;
+}
+
+/* Media Icons */
+.custom-icon:hover {
+  color: #0000ff;
+  transition: color 0.3s ease;
 }
 
 /* Home page Hero section */
