@@ -52,20 +52,15 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE,
                              related_name='bookings')
-    slot = models.ForeignKey(AvailableSlot, on_delete=models.CASCADE, 
-                             blank=False, related_name='bookings')
+    slot = models.ForeignKey(AvailableSlot, on_delete=models.CASCADE,
+                             related_name='bookings')
     notes = models.TextField(max_length=250, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=Status.choices,
                                  default=Status.PENDING)
 
     class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['slot', 'user'],
-                name='unique_user_slot_booking'
-            )
-        ]
+
         ordering = ['-created_at']
 
     def clean(self):
@@ -74,6 +69,10 @@ class Booking(models.Model):
         1. The slot date is not in the past.
         2. The slot is not already booked by another user.
         """
+        if not self.slot:
+            raise ValidationError({'slot':
+                                   'A booking must have a valid slot.'})
+
         if self.slot.date < timezone.now().date():
             raise ValidationError({'slot': 'Cannot book a past slot.'})
 
