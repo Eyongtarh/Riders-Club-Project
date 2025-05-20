@@ -52,8 +52,8 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE,
                              related_name='bookings')
-    slot = models.ForeignKey(AvailableSlot, on_delete=models.CASCADE,
-                             related_name='bookings')
+    slot = models.ForeignKey(AvailableSlot, on_delete=models.CASCADE, 
+                             blank=False, related_name='bookings')
     notes = models.TextField(max_length=250, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=Status.choices,
