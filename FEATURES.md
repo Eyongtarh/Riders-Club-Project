@@ -3,16 +3,17 @@
 ## Features
 
 Website has the following pages:
-- home page
-- contact page
+- Home page
+- Contact page
 - Book Training page
-- login page
-- registration page
-- logout page
-- create booking
-- view(Details) bookings
-- edit(Update) booking page
-- delete(confirm) booking page
+- Login page
+- Registration page
+- Logout page
+- Succes contact form message page
+- Create booking
+- View(Details) bookings
+- Edit(Update) booking page
+- Delete(confirm) booking page
 
 
 
@@ -20,7 +21,7 @@ Website has the following pages:
 
 Each page has a navbar and a footer
 
-**Navbar**
+#### Navbar
 
 1 Navbar has the following links with logout:
 
@@ -57,7 +58,7 @@ Each page has a navbar and a footer
 
 
 
-**Footer**
+#### Footer
 
 ![Footer](documentation/features/footer/footer.png)
 
@@ -77,83 +78,82 @@ For mobile devices, the footer looks like Viz:
 
 
 
-**Home page**
+#### Home page
 
+
+The Home page consist of a hero section, features section, gallery section and testimonials.
 ![Home page](documentation/features/home_page/home_page.png)
-
-The Home page has a simple welcome message and a button "get started" which leads to the registration page, from which the user can be redirected to the login page.
-
-- ![Home page Hero section](documentation/features/home_page/home_page_logo_get_started.png)
-
-Under the hero section, there is a section, which describes the benefits of signing up.
-
-- ![Home page Features section](documentation/features/home_page/home_page_benefits.png)
-
-This section has 3 cards, each with a title, a description, and an image.
-
-On the mobile version, the cards are displayed in two rows.
-
-- ![Home page Gallery section](documentation/features/home_page/home_page_benefits_mobile.png)
-
-The first subsection has a text incentive on the left side and an image on the right side.
-
-- ![Home page Testimonials section](documentation/features/home_page/home_page_incentive.png)
-
-The second subsection has a text describing the school's personnel on the right side and an image on the left side.
-
-- ![Home page Second subsection](documentation/features/home_page/home_page_personnel.png)
-
-The third subsection has a text describing the school's concern about children's health on the left side and an image on the right side.
-
-- ![Home page Third subsection](documentation/features/home_page/home_page_health.png)
+![Home page](documentation/features/home_page/home_page2.png)
 
 
-After the subsections, there is an immediate contact section that has an incentive to become a school member right now and a button "get started", which leads to the registration page. The user can be redirected to the login page.
+##### Hero Section
 
-  ![Home page Contact section](documentation/features/home_page/home_page_contact_now.png)
+This section has a welcome message and a button "Book Training" at the center which leads to the book training page. Under the hero 
 
-**Registration page**
+section, there is a section, which describes the features of the Riders Club.
 
-  ![Registration page](documentation/features/register_page/signup_page.png)
+![Home page Hero section](documentation/features/home_page/home_page_hero.png)
 
-This page has a dark-blue container with a sign up form, which has a header and input fields for the user to fill in.
+##### Features Section
 
-In the header of the form, there is a title "Sign up" and a subtitle "Please Fill out all information", which the seriousness of the company towards the user.
+This section has 3 images in 3 parts displayed in a row, with a title, and a description at the top for all. The first image is a race cyclist, the second image is a city cyclist with a child behind the loader, and the third image is a motorcyclist.
 
-  ![Registration page header](documentation/features/register_page/signup_page_header.png)
+On the mobile version, the sections are displayed in a column.
 
-Underneath, there is a subtitle "Already have an account?." and a button "Login", which leads to the login page.
+![Home page Features section](documentation/features/home_page/home_page_features.png)
 
-  ![Registration page header](documentation/features/register_page/signup_page_login.png)
+##### Gallery Section
 
-Under the form's header, there are the following fields:
+This section has 3 parts displayed in a row, each with an icon, a title, and a description.
 
-  ![Registration page fields](documentation/features/register_page/signup_page_fields.png)
+On the mobile version, the sections are displayed in a column.
 
-These fields are required for the user to be filled out.
-- Email address (to let sales managers and bosses contact the user)
-- Username (to let the user have a personal profile)
-- First name (to let the user have a personal profile)
-- Last name (to let the user have a personal profile)
-- Phone number (to let sales managers and bosses contact the user)
-- Password (to let the user log in)
-- Password confirmation (to let the user log in)
+![Home page Gallery section](documentation/features/home_page/home_page_gallery.png)
 
-If the user types the wrong email address, the email field will be highlighted.
+##### Testimonials Section
 
-  ![Registration page email field](documentation/features/register_page/signup_page_error_email.png)
+The section is the testimony of two users with their ratings.
 
-If the user leaves an empty field, the field will be highlighted.
+![Home page Testimonials section](documentation/features/home_page/home_page_testimonials.png)
 
-  ![Registration page empty field](documentation/features/register_page/signup_page_error_empty_field.png)
 
-If the user typed a not save password or the confirmation password didn't match, the password field will be highlighted.
+#### Contact page
 
-  ![Registration page password field](documentation/features/register_page/signup_page_error_password.png)
+ The Home page consist of a hero section, features section, gallery section and testimonials.
+![Contact page](documentation/features/home_page/home_page.png)
+![Contact page](documentation/features/home_page/home_page2.png)
 
-If the user typed a not save username, the username field will be highlighted.
 
-  ![Registration page username field](documentation/features/register_page/signup_page_error_username.png)
+##### Contact Info Section
+
+This section has a welcome message and a button "Book Training" at the center which leads to the book training page. Under the hero 
+
+section, there is a section, which describes the features of the Riders Club.
+
+![Contact page Contact Info Section](documentation/features/home_page/home_page_hero.png)
+
+##### Business Hours Section
+
+This section has 3 images in 3 parts displayed in a row, with a title, and a description at the top for all. The first image is a race cyclist, the second image is a city cyclist with a child behind the loader, and the third image is a motorcyclist.
+
+On the mobile version, the sections are displayed in a column.
+
+![Contact page Business Hours Section](documentation/features/home_page/home_page_features.png)
+
+##### Contact Form Section
+
+This section has 3 parts displayed in a row, each with an icon, a title, and a description.
+
+On the mobile version, the sections are displayed in a column.
+
+![Contact page Contact Form Section](documentation/features/home_page/home_page_gallery.png)
+
+##### FAQ Section
+
+The section is the testimony of two users with their ratings.
+
+![Contact page FAQ Section](documentation/features/home_page/home_page_testimonials.png)
+
 
 **Login page**
 
