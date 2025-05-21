@@ -71,6 +71,10 @@ Footer has the following sections:
 
 - Footer bottom which is below the above three sections, houses the copyright statement.
 
+For mobile devices, the footer looks like Viz:
+
+![Footer](documentation/features/footer/footer2.png)
+
 
 
 **Home page**
