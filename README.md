@@ -19,30 +19,29 @@ The website was developed to meet the need to improve skills for:
 
 ### User Stories
 
-#### **User Goals**
-
-| Issue ID    | User Story |
-|-------------|-------------|
-|[#1](https://github.com/IuliiaKonovalova/school_app/issues/1)| As a First Time Visitor, I want to be able to easily understand the main purpose of the app, so that I can learn more about this app. |
-|[#2](https://github.com/IuliiaKonovalova/school_app/issues/2)|As a First Time Visitor, I want to be able to easily navigate through the app, so that I can find the content.|
-|[#3](https://github.com/IuliiaKonovalova/school_app/issues/3)|As a First Time Visitor, I want to be able to register my account, so that I can learn the benefits of the app as a user.|
-|[#4](https://github.com/IuliiaKonovalova/school_app/issues/4)|As a First Time Visitor, I want to be able to find the app useful, so that I can use it according to my needs.|
 
 #### **Site Developer Goals**
 
 | Issue ID    | User Story |
 |-------------|-------------|
-|[#5](https://github.com/IuliiaKonovalova/school_app/issues/5)|As a Frequent User, I want to be able to log in to my account, so that I can have a personal account.|
-|[#6](https://github.com/IuliiaKonovalova/school_app/issues/6)|As a Frequent User, I want to be able to easily log in and log out, so that I can access my personal account information.|
-|[#7](https://github.com/IuliiaKonovalova/school_app/issues/7)|As a Frequent User, I want to be able to easily recover my password in case I forget it, so that I can recover access to my account.|
-|[#8](https://github.com/IuliiaKonovalova/school_app/issues/8)|As a Frequent User, I can be able to change my password, so that I can be sure that nobody else can access my account.|
+|[#1](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992563&issue=Eyongtarh%7CRiders-Club-Project%7C1)| As a site developer, I want to set up both development and production environments, so that I can build and deploy a reliable Riders club website. |
 
-#### **Administrator Goals**
+
+#### **Site Developer Goals**
 
 | Issue ID    | User Story |
 |-------------|-------------|
-|[#9](https://github.com/IuliiaKonovalova/school_app/issues/9)|As a Potential client, I want to be contacted by sales managers, so that I can make a prudent decision about becoming a member.|
-|[#53](https://github.com/IuliiaKonovalova/school_app/issues/53)|As a Sales Manager I can edit information on about a sale so that change the data on a sale if a mistake was made or a parent changed his or her mind.|
+|[#2](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992635&issue=Eyongtarh%7CRiders-Club-Project%7C2)|As a site user, I want to register and log in to an account so that I can book club training sessions.|
+|[#3](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992665&issue=Eyongtarh%7CRiders-Club-Project%7C3)|As a logged-in site user, I want to create, view, update, and delete my booked trainings so that I can manage my training schedule effectively.|
+|[#4](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992698&issue=Eyongtarh%7CRiders-Club-Project%7C4)|As a site user, I want to fill out and submit a contact form to express my interest in collaborating with the club, So that the club can review my request and get in touch with me for further communication.|
+
+
+#### **Site Owner Goals**
+
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#5](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992724&issue=Eyongtarh%7CRiders-Club-Project%7C5)|As a site owner I can update home page so that I can make users to better understand the purpose of the club.|
+|[#6](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992750&issue=Eyongtarh%7CRiders-Club-Project%7C6)|As a site owner I can add information to contact page so that I can make it easier for users to reach site owner.|
 
 ---
 
@@ -61,7 +60,6 @@ The website was developed to meet the need to improve skills for:
 
 - ### Databases:
 
-    + [SQLite](https://www.sqlite.org/): was used as a development database.
     + [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
 
 - ### Other tools:
@@ -74,6 +72,7 @@ The website was developed to meet the need to improve skills for:
     + [Django-crispy-forms](https://django-cryptography.readthedocs.io/en/latest/): was used to control the rendering behavior of
       Django forms.
     + [GitHub](https://github.com/): used to host the website's source code.
+    + [Whitenoise](https://whitenoise.readthedocs.io/en/latest/): used to adically simplify static file serving for Python web apps.
     + [VSCode](https://code.visualstudio.com/): the IDE used to develop the website.
     + [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website.
     + [Font Awesome](https://fontawesome.com/): was used to create the icons used in the website.
@@ -93,7 +92,6 @@ The website was developed to meet the need to improve skills for:
 ## FEATURES
 
 Please refer to the [FEATURES.md](FEATURES.md) file for all features-related documentation.
-
 
 
 ---
