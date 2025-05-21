@@ -83,27 +83,25 @@ The Home page has a simple welcome message and a button "get started" which lead
 
 Under the hero section, there is a section, which describes the benefits of signing up.
 
-- ![Home page Benefits section](documentation/features/home_page/home_page_benefits.png)
+- ![Home page Features section](documentation/features/home_page/home_page_benefits.png)
 
 This section has 3 cards, each with a title, a description, and an image.
 
 On the mobile version, the cards are displayed in two rows.
 
-  ![Home page Benefits section mobile](documentation/features/home_page/home_page_benefits_mobile.png)
+- ![Home page Gallery section](documentation/features/home_page/home_page_benefits_mobile.png)
 
-After the cards, there are 3 subsections.
+The first subsection has a text incentive on the left side and an image on the right side.
 
-1. The first subsection has a text incentive on the left side and an image on the right side.
+- ![Home page Testimonials section](documentation/features/home_page/home_page_incentive.png)
 
-  ![Home page First subsection](documentation/features/home_page/home_page_incentive.png)
+The second subsection has a text describing the school's personnel on the right side and an image on the left side.
 
-2. The second subsection has a text describing the school's personnel on the right side and an image on the left side.
+- ![Home page Second subsection](documentation/features/home_page/home_page_personnel.png)
 
-  ![Home page Second subsection](documentation/features/home_page/home_page_personnel.png)
+The third subsection has a text describing the school's concern about children's health on the left side and an image on the right side.
 
-3. The third subsection has a text describing the school's concern about children's health on the left side and an image on the right side.
-
-  ![Home page Third subsection](documentation/features/home_page/home_page_health.png)
+- ![Home page Third subsection](documentation/features/home_page/home_page_health.png)
 
 
 After the subsections, there is an immediate contact section that has an incentive to become a school member right now and a button "get started", which leads to the registration page. The user can be redirected to the login page.

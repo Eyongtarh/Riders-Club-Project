@@ -8,16 +8,27 @@
       <div class="col-12 col-md-8 text-center">
         <h2>Booking Details</h2>
         <p>
-          <strong>Slot:</strong> {{ booking.slot }}
+          <strong>Date:</strong> {{ booking.slot.date }}
         </p>
         <p>
-          <strong>Status:</strong> {{ booking.get_status_display }}
+          <strong>Time:</strong> {{ booking.slot.time }}
         </p>
         <p>
-          <strong>Notes:</strong> {{ booking.notes }}
+          <strong>Location:</strong> {{ booking.slot.location }}
         </p>
+
+        <hr />
+
+        <h5 class="card-title">Booking Information</h5>
         <p>
-          <strong>Created At:</strong> {{ booking.created_at }}
+          <strong>Status:</strong>
+          {% if booking.status == 0 %}
+            Pending
+          {% elif booking.status == 1 %}
+            Confirmed
+          {% elif booking.status == 2 %}
+            Cancelled
+          {% endif %}
         </p>
 
         <div class="d-flex justify-content-center flex-wrap">
