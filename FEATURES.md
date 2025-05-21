@@ -15,67 +15,47 @@ Website has the following pages:
 - delete(confirm) booking page
 
 
+
 ### Pages:
 
 Each page has a navbar and a footer
 
 **Navbar**
 
-![Navbar](documentation/features/navbar/navbar.png)
+1 Navbar has the following links with logout:
 
-Navbar has the following links:
-- home page
-- button "get started", which leads to the registration page and login page
-- ![Get Started button](documentation/features/navbar/get_started_button.png)
-- It also has a logo of the school
-- ![Logo](documentation/features/navbar/main_logo.png)
+![Navbar, logout](documentation/features/navbar/navbar.png)
 
-The simplistic design of the navbar is based on the decision to make the use of the webapp easy for the user.
+- Home page.
+- Contact page.
+- Book Training page.
+- Registration page.
+- Login page.
+- A title name: RidersClub
+- It also has a statement: community for cyclists and motorcyclists, and a message display below it: Not logged in
 
-When the user clicks on the get started button, the menu opens, and the user can choose to register or log in.
+2 Navbar has the following links with login:
 
-- ![Get Started menu](documentation/features/navbar/navbar_logout.png) 
+![Navbar, login](documentation/features/navbar/navbar2.png)
 
-When the user is logged in, the navbar looks as follows.
+- Home page.
+- Contact page.
+- Book Training page.
+- Logout page.
+- A title name: RidersClub
+- It also has a statement: community for cyclists and motorcyclists, and a message display below it: logged in as (Username).
 
-- ![Navbar User logged in](documentation/features/navbar/navbar_logged_in.png)
+3 Navbar has the Hamburger Menu on mobile devices:
 
-It has only one button "Menu", which opens the menu.
+![Navbar, login](documentation/features/navbar/navbar5.png)
 
-- ![Menu Button](documentation/features/navbar/navbar_menu.png)
+- Navbar Hamburger Menu With login
+![Navbar, login](documentation/features/navbar/navbar3.png)
 
-If the user is a boss or a sales manager, the menu has a following links:
+- Navbar Hamburger Menu With logout
+![Navbar, logout](documentation/features/navbar/navbar4.png)
 
-- ![Menu Boss or Manager View](documentation/features/navbar/menu_admin_view.png)
 
-Menu has the following buttons:
-- Profile (which leads to the user profile page)
-- New applications (which leads to the new applications page)
-- Sales (which leads to the sales page)
-- Members (which leads to the members page)
-- Students (which leads to the students page)
-- Schedule (which leads to the schedule page)
-- Logout (which leads to the logout page)
-
-If the user is a teacher or a receptionist, the menu has a following look:
-
-- ![Menu Teacher or Receptionist View](documentation/features/navbar/menu_receptionists.png)
-
-Menu has the following buttons:
-- Profile (which leads to the user profile page)
-- Members (which leads to the members page)
-- Students (which leads to the students page)
-- Schedule (which leads to the schedule page)
-- Logout (which leads to the logout page)
-
-if the user is a parent or a potential client, the menu has a following look:
-
-- ![Menu Parent or Potential Client View](documentation/features/navbar/navbar_limited_access.png)
-
-Menu has the following buttons:
-- Profile (which leads to the user profile page)
-- Schedule (which leads to the schedule page)
-- Logout (which leads to the logout page)
 
 **Footer**
 
@@ -83,22 +63,14 @@ Menu has the following buttons:
 
 Footer has the following sections:
 
-- Logo in the top left corner:
+- About RidersClub in first place.
 
-  ![Logo](documentation/features/footer/footer_logo.png)
+- Quick Links in the second place.
 
-- School information in the middle with the school email, phone number, and address:
+- Social Medial links in the third place.
 
-  ![School Information](documentation/features/footer/footer_school_data.png)
+- Footer bottom which is below the above three sections, houses the copyright statement.
 
-- Information about the coder is on the right side with links to the GitHub and LinkedIn, and email:
-
-  ![Coder Information](documentation/features/footer/footer_creator_data.png)
-
-
-For the mobile version of the website, the footer looks as follows:
-
-  ![Footer Mobile](documentation/features/footer/footer_mobile.png)
 
 
 **Home page**
