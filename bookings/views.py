@@ -32,7 +32,7 @@ class BookingDetailView(LoginRequiredMixin, DetailView):
     """
     model = Booking
     context_object_name = 'booking'
-    template_name = 'bookings/booking_detail.html'
+    template_name = 'bookings/Booking_detail.html'
 
     def get_queryset(self):
         return self.model.objects.filter(user=self.request.user)
