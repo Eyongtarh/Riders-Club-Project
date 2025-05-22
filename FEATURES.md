@@ -278,15 +278,13 @@ On the mobile version, the page is displayed as viz:
 ![Confirm Deletion Page](documentation/features/contact_success_page/contact_success_page1.png)
 
 
-**Error Pages**
+### Error Pages
 
-There are also 2 additional error pages:
+There are 2 additional error pages:
 
-  ![Error Page. 404](documentation/features/error_page/404_error_page.png)
+  it has a box with the header "404 - Page Not Found", an image and a short message about the error ("The page you're looking for doesn't exist or may have been moved").
 
-  it has a box with the header "Page 404", an image and a short message about the error ("Something went wrong as this page is not found").
-
-  If the user is logged in and tries to access a page that doesn't exist, he/she will find a button with the link to his/her profile page.
+  If the user is logged in and tries to access a page that doesn't exist, he/she will find a button with the link to his/her Book Training page.
 
   ![Error Page. 404. Link to user profile](documentation/features/error_page/404_error_page2.png)
 
@@ -294,7 +292,7 @@ There are also 2 additional error pages:
 
   ![Error Page. 404. Link to home page](documentation/features/error_page/404_error_page1.png)
 
-  Page 505 is the same as 404 page, but it has a different header ("Page 500") and message ("Something went wrong as there is an internal sever error!").
+  Page 505 is the same as 404 page, but it has a different header ("500 - Internal Server Error") and message ("Something went wrong due to an internal server error").
 
   ![Error Page. 500](documentation/features/error_page/500_error_page.png)
 
