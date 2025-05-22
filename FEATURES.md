@@ -15,6 +15,7 @@ Website has the following pages:
 - Confirm Deletion Page
 - Contact Form Success Page
 - Error Pages
+- Favicon
 
 
 
@@ -302,6 +303,6 @@ There are 2 additional error pages:
 
   The favicon is a small image displayed in the browser's address bar. It identifies the website amongst others.
 
-[Back to contents](#contents)
+[Back to Features](#features)
 
 ---
