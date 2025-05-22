@@ -145,12 +145,6 @@ body {
 
 /* Error message style for 404/505 */
 
-.error-section {
-  padding: 60px 0;
-  background-color: #f8f9fa;
-  color: #343a40;
-}
-
 .error-title {
   font-size: 2.5rem;
   font-weight: 700;
