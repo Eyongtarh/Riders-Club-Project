@@ -12,8 +12,8 @@ Website has the following pages:
 - Create New Booking Page
 - Bookings Details Page
 - Update Booking Page
-- Confirm Delete Booking Page
-- Success Page
+- Confirm Deletion Page
+- Contact Form Success Page
 - Error Pages
 
 
@@ -229,7 +229,9 @@ On the mobile version, the page is displayed as viz:
 
 ### Bookings Details Page
 
-This page has a button link in the "book training page" as "Detail" for each booked slot. When clicked, it leads to the "Bookings Details Page". The page has a header and displays booked date, time, location, and status(pending, confirmed, or cancelled). It equally has 3 buttons at the bottom which are: "Update"; leads to update booking page, "Delete"; leads to delete booking page, and  "Book Training" leads to book training page. 
+This page has a button link in the "book training page" as "Detail" for each booked slot. When clicked, it leads to the "Bookings Details Page". The page has a header and displays booked date, time, location, and status(pending, confirmed, or cancelled). 
+
+It equally has 3 buttons at the bottom which are: "Update"; leads to update booking page, "Delete"; leads to delete booking page, and  "Book Training" leads to book training page. 
 
 ![Bookings Details Page](documentation/features/detail_booking_page/detail_booking_page.png)
 
@@ -240,136 +242,40 @@ On the mobile version, the page is displayed as viz:
 
 ### Update Booking Page
 
-This page has a button link in the book training page as "Detail" for each booked slot, when clicked, it leads to the "Bookings Details Page". The page has a header and includes input fields for the user to fill in slot(required), optional notes, and status(required). It has a button at the bottom: "Create New Booking". 
+This page has a link in the book training page for each booking. When clicked, it leads to the update booking page. The page has a header and includes input fields for the user to edit whic are: slot(required), optional notes, and status(required). 
 
-  ![Update Booking Page](documentation/features/update_booking_page/update_booking_page.png)
+It has two buttons at the bottom: "Update Booking" button; which updates the booking and leads to "Book Training page" and "Cancel" button; which leads to "Book Training page".
 
-It has a container where the user can edit:
+![Update Booking Page](documentation/features/update_booking_page/update_booking_page.png)
 
-- First Name;
-- Last Name;
-- Phone Number;
+On the mobile version, the page is displayed as viz:
 
-There are three fields with prefilled data for the user. The user could change this data if he/she wants.
-
-  ![Edit profile page](documentation/features/profile_edit_page/profile_edit_fields.png)
-
-Underneath the fields, there are two buttons, "Go Back" and "Save." If the user doesn't want to save changes, they can click on the "Go Back" button and will be redirected to the profile page. If the user wants to save changes, they can click on the "Save" button and will be redirected to the profile page.
-
-  ![Edit profile page](documentation/features/profile_edit_page/cancel_save_buttons.png)
-
-**Profile Delete Page**
-
-  ![Profile delete page](documentation/features/profile_delete_page/profile_delete_page.png)
-
-Only the bosses have access to this page as only they are able to delete any profile.
-
-This page has a box with a warning message and a link to the profile page of the user that is about to be deleted:
-
-  ![Profile delete page](documentation/features/profile_delete_page/member_delete_link.png)
-
-There are two buttons under the warning message, there are two buttons, "Cancel" and "Delete". If the user doesn't want to delete the profile, he/she can click on the "Cancel" button and will be redirected to the profile page. If the user wants to delete the profile, he/she can click on the "Delete" button and will be redirected to the profile page, and the school member will be permanently deleted.
-
-  ![Profile delete page](documentation/features/profile_delete_page/cancel_delete_buttons.png)
-
-**Profile Change Password Page**
-
-  ![Profile change password page](documentation/features/profile_change_password_page/profile_password_page.png)
-
-It has a header with the title "Change Password" and a subtitle to guide the user on what to do next. Underneath, there are three field to be filled:
-
-- Old Password;
-- New Password;
-- Confirm New Password.
-
-  ![Profile change password page](documentation/features/profile_change_password_page/change_password_fields.png)
-
-If there are any errors in the fields, the user will see the error message.
-
-Under the fields, there are two buttons, "Go Back" and "Submit". If the user doesn't want to change the password, he/she can click on the "Go Back" button and will be redirected to the profile page. If the user wants to change the password, he/she can click on the "Change Password" button and will be redirected to the profile page, and the password will be changed if all conditions are met.
-
-  ![Profile change password page](documentation/features/profile_change_password_page/cancel_delete_buttons.png)
-
-**New Applications Page**
-
-This page is only visible to the boss and sales manager.
-  
-![New applications page](documentation/features/new_applications_page/new_applications.png)
-
-This page has a title and the number of the new applications left.
-
-  ![New applications page](documentation/features/new_applications_page/new_applications_summary.png)
-
-It also has a table with the new applications, where each application has a link. After clicking on the application in a table, the user will be redirected to the application detail page.
-
-  ![New applications page](documentation/features/new_applications_page/new_applications_data.png)
-
-Underneath the table, there are navigation buttons. If the user wants to see the next page of the application, he/she can click on the "Next" button. If the user wants to see the previous page of the applications, he/she can click on the "Previous" button.
-
-  ![New applications page](documentation/features/new_applications_page/page_navigation1.png)
-  ![New applications page](documentation/features/new_applications_page/page_navigation2.png)
-
-**Application Detail Page**
-
-This page is accessible to the boss and sales manager.
-For the boss, the page has the following look:
-
-  ![Application detail page. Boss View](documentation/features/application_detail_page/application_detail_admin_view.png)
-
-It has two boxes. The first box consists of the information about the applicant, including the name, the email, and the phone number.
-
-  ![Application detail page. Applicant Data Box](documentation/features/application_detail_page/application_detail_data.png)
-
-It also has a "Delete" button in the top right corner of the page. If the boss wants to delete the application, he/she can click on the "Delete" button and will be redirected to the delete application page.
-
-  ![Application detail page. Delete Button](documentation/features/application_detail_page/application_detail_delete_button.png)
-
-The second box provides the boss with the assigning role functionality, which will give access to the applicant to the application according to the role the boss assigns.
-
-  ![Application detail page. Role Assignment Box](documentation/features/application_detail_page/application_detail_role.png)
-
-When the boss clicks on the dropdown menu, the following choices will be shown:
-
-  ![Application detail page. Role Choices](documentation/features/application_detail_page/application_detail_role_choice.png)
-
-After choosing the role the boss wants to assign, he/she can click on the "Save" button.
-
-  ![Application detail page. Save Role Button](documentation/features/application_detail_page/application_detail_save_role_button.png)
-
-When the boss clicks on "Save" button, the role will be assigned to the applicant. However, it will not redirect the boss to any page in order to prevent the boss from accidentally assigning the wrong role to an applicant.
-
-To go back to the applications page, the boss may click on the link underneath the boxes "Go to other applications". And the user will be redirected to the applications page.
-
-  ![Application detail page. Go back to applications](documentation/features/application_detail_page/application_detail_back.png)
-
-For the sales manager, the page has the following look:
-
-  ![Application detail page. Sales Manager View](documentation/features/application_detail_page/application_detail_sale_view.png)
-
-The page has no "Delete" button as it is not accessible to the sales manager. Moreover, the page has no box with the assigning role to the new applicant as it is accessible only to the boss.
-
-**Application Delete Page**
-
-  ![Application delete page](documentation/features/application_delete_page/application_delete_page.png)
-
-This page is only accessible to the boss. Thus, only the boss is empowered to delete any applications.
-It has a warning message with the applicant's name.
-
-  ![Application delete page](documentation/features/application_delete_page/application_delete_warning.png)
-
-It also has 2 buttons, "Go Back" and "Delete". If the boss doesn't want to delete the application, he/she can click on "Go Back" button and will be redirected to the application detail page. If the boss wants to delete the application, he/she can click on "Delete" button. He / she will be redirected to the new applications page, and the application will be permanently deleted.
-
-  ![Application delete page](documentation/features/application_delete_page/cancel_delete_buttons.png)
-
-**Limited Access Page**
-
-  ![Limited access page](documentation/features/limited_access_page/limited_access_page.png)
-
-This page applies to the users that are not allowed to access the page that they want to enter manually in the address bar. it has a box with a friendly message pointing out that the user has no access to a particular page. It also has a link to the user's profile page.
+![Update Booking Page](documentation/features/update_booking_page/update_booking_page1.png)
 
 
-  ![Limited access page. Link to Personal Profile](documentation/features/limited_access_page/limit_access_link.png)
 
+### Confirm Deletion Page
+
+This page has a link in the book training page for each booking as "Delete". When clicked, it leads to the "Confirm Deletion Page". The page has a header and includes the slot's booking date, time, place, status, notes, and date/time created.
+
+It has two buttons at the bottom: "Yes, Delete it" button; which deletes the booking and leads to "Book Training page" and "Cancel" button; which leads to "Book Training page".
+
+![Confirm Deletion Page](documentation/features/confirm_deletion_page/confirm_deletion_page.png)
+
+On the mobile version, the page is displayed as viz:
+
+![Confirm Deletion Page](documentation/features/confirm_deletion_page/confirm_deletion_page1.png)
+
+
+### Contact Form Success Page
+
+This page displays when a contact form in the contact page is submitted succesfully. It displays a thank you message and assures you of a reply.
+
+![Contact Form Success Page](documentation/features/contact_success_page/contact_success_page.png)
+
+On the mobile version, the page is displayed as viz:
+
+![Confirm Deletion Page](documentation/features/contact_success_page/contact_success_page1.png)
 
 
 **Error Pages**
