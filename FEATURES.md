@@ -120,39 +120,44 @@ The section is the testimony of two users with their ratings.
 #### Contact page
 
  The Home page consist of a hero section, features section, gallery section and testimonials.
-![Contact page](documentation/features/home_page/home_page.png)
-![Contact page](documentation/features/home_page/home_page2.png)
+![Contact page](documentation/features/contact_page/contact_page.png)
+![Contact page](documentation/features/contact_page/contact_page2.png)
 
 
-##### Contact Info Section
+##### Contact Information Section
 
-This section has a welcome message and a button "Book Training" at the center which leads to the book training page. Under the hero 
+This section has two sections, first section contains a welcome message and second section contains address(email, telephone, and postal address) and location google map in an iframe. 
 
-section, there is a section, which describes the features of the Riders Club.
+![Contact page, Contact Information Section](documentation/features/contact_page/contact_info.png)
 
-![Contact page Contact Info Section](documentation/features/home_page/home_page_hero.png)
+On the mobile version, the sections are displayed in a column.
+
+![Contact page, Contact Information Section](documentation/features/contact_page/contact_info2.png)
 
 ##### Business Hours Section
 
-This section has 3 images in 3 parts displayed in a row, with a title, and a description at the top for all. The first image is a race cyclist, the second image is a city cyclist with a child behind the loader, and the third image is a motorcyclist.
+This section contains working days and opening and clossing hours. It is displayed in a row, with a title, and a description at the top.
 
-On the mobile version, the sections are displayed in a column.
+On the mobile version, the sections is displayed in same way; centered.
 
-![Contact page Business Hours Section](documentation/features/home_page/home_page_features.png)
+![Contact page Business Hours Section](documentation/features/contact_page/contact_hours.png)
 
 ##### Contact Form Section
 
-This section has 3 parts displayed in a row, each with an icon, a title, and a description.
+This section is a contact form with required entries of name, email, and message. A submit button is below and a successful message will display if positive , otherwise a failed message will display indicating what to fix.
 
-On the mobile version, the sections are displayed in a column.
+On the mobile version, the section is displayed in same way.
 
-![Contact page Contact Form Section](documentation/features/home_page/home_page_gallery.png)
+![Contact page Contact Form Section](documentation/features/contact_page/contact_form.png)
+
 
 ##### FAQ Section
 
 The section is the testimony of two users with their ratings.
 
-![Contact page FAQ Section](documentation/features/home_page/home_page_testimonials.png)
+On the mobile version, the section is displayed in same way.
+
+![Contact page FAQ Section](documentation/features/contact_page/contact_faq.png)
 
 
 **Login page**
