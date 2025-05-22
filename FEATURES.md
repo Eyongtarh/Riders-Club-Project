@@ -9,7 +9,7 @@ Website has the following pages:
 - Login Page
 - Logout Page
 - Registration Page
-- Create New Booking
+- Create New Booking Page
 - Bookings Details Page
 - Update Booking Page
 - Confirm Delete Booking Page
@@ -201,19 +201,48 @@ On the mobile version, the page is displayed as viz:
 
 ### Registration Page
 
-This page has a white background with a logout form with a header and a button "Logout" leading to the home page.
+This page has a white background with a registration form, which has a header including a "signin" button if user is already registered. The form includes input fields for the user to fill in user name, optional email, password and password again. Plus it has a button "Sign Up".
 
-![Logout page](documentation/features/registration_page/registration_page.png)
+![Registration Page](documentation/features/registration_page/registration_page.png)
 
 On the mobile version, the page is displayed as viz:
 
-![Logout page](documentation/features/registration_page/registration_page1.png)
+![Registration Page](documentation/features/registration_page/registration_page1.png)
 
 
 
-**Edit profile page**
+### Create New Booking Page
 
-  ![Edit profile page](documentation/features/profile_edit_page/profile_edit_page.png)
+This page has a link in the book training page, when clicked, it leads to the create new booking page. The page has a header and includes input fields for the user to fill in slot(required), optional notes, and status(required). It has a button at the bottom: "Create New Booking". 
+
+![Create New Booking Page](documentation/features/new_booking_page/new_booking_page.png)
+
+If succesful, a booking is created and leads you to the booking training page and a succesful message will display. If unsuccesful, an error message will display and equally gives you an explanation of what is wrong. For example as viz:
+
+![Create New Booking Page](documentation/features/new_booking_page/new_booking_page1.png)
+
+On the mobile version, the page is displayed as viz:
+
+![Create New Booking Page](documentation/features/new_booking_page/new_booking_page2.png)
+
+
+
+### Bookings Details Page
+
+This page has a button link in the "book training page" as "Detail" for each booked slot. When clicked, it leads to the "Bookings Details Page". The page has a header and displays booked date, time, location, and status(pending, confirmed, or cancelled). It equally has 3 buttons at the bottom which are: "Update"; leads to update booking page, "Delete"; leads to delete booking page, and  "Book Training" leads to book training page. 
+
+![Bookings Details Page](documentation/features/detail_booking_page/detail_booking_page.png)
+
+On the mobile version, the page is displayed as viz:
+
+![Bookings Details Page](documentation/features/detail_booking_page/detail_booking_page1.png)
+
+
+### Update Booking Page
+
+This page has a button link in the book training page as "Detail" for each booked slot, when clicked, it leads to the "Bookings Details Page". The page has a header and includes input fields for the user to fill in slot(required), optional notes, and status(required). It has a button at the bottom: "Create New Booking". 
+
+  ![Update Booking Page](documentation/features/update_booking_page/update_booking_page.png)
 
 It has a container where the user can edit:
 
