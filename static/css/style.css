@@ -132,10 +132,13 @@ body {
 
 /* Error message style for non_field_error */
 
-.invalid-feedback {
+.invalid-feedback,
+.errorlist,
+.nonfield {
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
   padding: 12px 16px;
   border-radius: 8px;
   background-color: #ffe0e0;

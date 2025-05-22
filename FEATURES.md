@@ -9,7 +9,6 @@ Website has the following pages:
 - Login page
 - Registration page
 - Logout page
-- Succes contact form message page
 - Create booking
 - View(Details) bookings
 - Edit(Update) booking page
@@ -78,7 +77,7 @@ For mobile devices, the footer looks like Viz:
 
 
 
-#### Home page
+#### Home Page
 
 
 The Home page consist of a hero section, features section, gallery section and testimonials.
@@ -117,7 +116,7 @@ The section is the testimony of two users with their ratings.
 ![Home page Testimonials section](documentation/features/home_page/home_page_testimonials.png)
 
 
-#### Contact page
+#### Contact Page
 
  The Home page consist of a hero section, features section, gallery section and testimonials.
 ![Contact page](documentation/features/contact_page/contact_page.png)
@@ -159,39 +158,30 @@ On the mobile version, the section is displayed in same way.
 
 ![Contact page FAQ Section](documentation/features/contact_page/contact_faq.png)
 
+#### Book Training Page
 
-**Login page**
+ The book training page consist of a welcome page header message , section header message; your bookings and a button to create new bookings. Below is a table showing all user bookings illustrated by slot, status, created at, action. Under action, user is able to see booking details, update booking, and delete booking. Below the table, pagination is displayed when there is pagination.
 
-  ![Login page](documentation/features/login_page/login_page.png)
+ Book training page when there are no bookings.
 
-Login Page has a dark-blue container with a login form, which has a header and input fields for the user to fill in. Plus it has a button "Sign In" and "Forgot password?", leading to the forgot password page.
+![Contact page](documentation/features/booking_page/booking_book.png)
 
-  ![Login page header](documentation/features/login_page/login_page_header.png)
+Book training page when there are bookings.
 
-The header has the title "Log in" and the subtitle "If you have not created an account yet, then please sign up first."
+![Contact page](documentation/features/booking_page/booking_book2.png)
 
-When the user clicks on the button, he is redirected to the registration page.
+On the mobile version, the booking table section is scrollable.
 
-  ![Login page header](documentation/features/login_page/login_page_signup_button.png)
+![Contact page](documentation/features/booking_page/booking_book3.png)
 
-Underneath, there are two fields which have to be filled out in order to log in:
 
-- Username or email address
-- Password
 
-  ![Login page fields](documentation/features/login_page/login_page_fields.png)
+### Login page
 
-If the user made a mistake in the username or password, the field will be highlighted.
+Login Page has a white background with a login form, which has a header including a "signup" button if user is not registered. The login form includes input fields for the user to fill in. Plus it has a button "Sign In".
 
-  ![Login page error field](documentation/features/login_page/login_page_error.png)
+  ![Login page](documentation/features/login_page/login_page_header.png)
 
-Under the fields, there is a button "Sign in" which leads to the schedule page.
-
-  ![Login page sign in button](documentation/features/login_page/login_page_button.png)
-
-Under this button, there is a button "Forgot password?", which leads to the forgot password page.
-
-  ![Login page forgot password button](documentation/features/login_page/login_page_forgot_password.png)
 
 **Logout page**
 
