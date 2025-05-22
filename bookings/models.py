@@ -76,9 +76,19 @@ class Booking(models.Model):
         if self.slot.date < timezone.now().date():
             raise ValidationError({'slot': 'Cannot book a past slot.'})
 
-        if Booking.objects.filter(slot=self.slot).exclude(pk=self.pk).exists():
-            raise ValidationError({'slot':
-                                   'This slot has already been booked.'})
+        if Booking.objects.filter(
+            slot=self.slot,
+            status__in=[Booking.Status.PENDING, Booking.Status.CONFIRMED]
+        ).exclude(pk=self.pk).exists():
+            raise ValidationError({
+                'slot': 'This slot has already been booked.'
+            })
+
+        if not Booking.objects.filter(
+            slot=self.slot,
+            status=Booking.Status.PENDING
+        ).exclude(pk=self.pk).exists():
+            self.status = Booking.Status.CONFIRMED
 
     def __str__(self):
         return f"{self.user.username} - {self.slot}"
