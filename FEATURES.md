@@ -286,7 +286,7 @@ There are 2 additional error pages:
 
   If the user is logged in and tries to access a page that doesn't exist, he/she will find a button with the link to his/her Book Training page.
 
-  ![Error Page. 404. Link to user profile](documentation/features/error_page/404_error_page2.png)
+  ![Error Page. 404. Link to user profile](documentation/features/error_page/404_error_page.png)
 
   If the user is logged out and tries to access a page that doesn't exist, he/she will find a button with the link to the home page
 
@@ -296,11 +296,11 @@ There are 2 additional error pages:
 
   ![Error Page. 500](documentation/features/error_page/500_error_page.png)
 
-**Favicon**
+### Favicon
 
   ![Favicon](documentation/features/favicon/favicon.png)
 
-  The favicon is a small image that is displayed in the browser's address bar. It is used to identify the website among others and help the user to find it when he/she is searching for it.
+  The favicon is a small image displayed in the browser's address bar. It identifies the website amongst others.
 
 [Back to contents](#contents)
 

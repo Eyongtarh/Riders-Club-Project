@@ -15,7 +15,7 @@
           <p class="error-message">The page you're looking for doesn't exist or may have been moved.</p>
 
           {% if request.user.is_authenticated %}
-            <a href="{% url 'bookings:booking_list' %}" class="btn btn-signup" aria-label="Navigate to Book Training page">Book Your Training</a>
+            <a href="{% url 'bookings:booking_list' %}" class="btn btn-signup" aria-label="Navigate to Book Training page">Book Training</a>
           {% else %}
             <a href="{{ home_url }}" class="btn btn-signup" aria-label="Navigate to Home page">Home Page</a>
           {% endif %}
