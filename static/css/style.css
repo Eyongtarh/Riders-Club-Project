@@ -2,13 +2,17 @@
  
 body {
   background-color: #F9FAFC;
+  font-family: 'Roboto', sans-serif;
 }
 
-.brand {
-  font-family: Lato, sans-serif;
-  font-size: 1.4rem;
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
-  color: #4A4A4F;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 /*nav Styles */
@@ -93,6 +97,7 @@ body {
   color: white;
   border-radius: 20px;
   overflow: hidden;
+  filter: brightness(2) contrast(0.9);
 }
 
 
@@ -120,7 +125,7 @@ body {
  /* btn-signup class */
 
  .btn-signup {
-  background-color: #0000ff;
+  background-color: #5858d9;
   color: #fff;
 }
 
