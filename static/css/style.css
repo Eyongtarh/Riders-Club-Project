@@ -97,7 +97,7 @@ p {
   color: white;
   border-radius: 20px;
   overflow: hidden;
-  filter: brightness(2) contrast(0.9);
+  filter: grayscale(50%);
 }
 
 
@@ -120,6 +120,7 @@ p {
   height: 400px;
   width: 100%;  
   object-fit: cover;
+  filter: grayscale(50%);
 }
 
  /* btn-signup class */
