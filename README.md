@@ -20,23 +20,23 @@ The website was developed to meet the need to improve skills for:
 ### User Stories
 
 
-#### **Site Developer Goals**
+#### Site Developer Goal
 
 | Issue ID    | User Story |
 |-------------|-------------|
 |[#1](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992563&issue=Eyongtarh%7CRiders-Club-Project%7C1)| As a site developer, I want to set up both development and production environments, so that I can build and deploy a reliable Riders club website. |
 
 
-#### **Site Developer Goals**
+#### Site User Goals
 
 | Issue ID    | User Story |
 |-------------|-------------|
 |[#2](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992635&issue=Eyongtarh%7CRiders-Club-Project%7C2)|As a site user, I want to register and log in to an account so that I can book club training sessions.|
-|[#3](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992665&issue=Eyongtarh%7CRiders-Club-Project%7C3)|As a logged-in site user, I want to create, view, update, and delete my booked trainings so that I can manage my training schedule effectively.|
+|[#3](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992665&issue=Eyongtarh%7CRiders-Club-Project%7C3)|As a logged-in site user, I want to create, view detail, update, and delete my booked trainings so that I can manage my training schedule effectively.|
 |[#4](https://github.com/users/Eyongtarh/projects/8/views/1?pane=issue&itemId=108992698&issue=Eyongtarh%7CRiders-Club-Project%7C4)|As a site user, I want to fill out and submit a contact form to express my interest in collaborating with the club, So that the club can review my request and get in touch with me for further communication.|
 
 
-#### **Site Owner Goals**
+#### Site Owner Goals
 
 | Issue ID    | User Story |
 |-------------|-------------|
@@ -114,47 +114,79 @@ Please refer to the [WIREFRAMES.md](WIREFRAMES.md) file for all features-related
 
 ### Entity-Relationship Diagram
 
-* The ERD was created using [Draw.io](https://www.lucidchart.com/).
+* The ERD was created using [Lucidchart](https://www.lucidchart.com/).
 
-- [Database Scheme](documentation/diagrams/db_final.pdf)
+- [Database Scheme](documentation/diagrams/db_scheme.png)
 
 ### Data Modeling
 
-1. **CustomUser**
+1. #### Bookings
 
+a. ***AvailableSlot***
+
+This represents bookable time slots.
 Extends Allauth's User model.
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-| UserName      | username      | CharField     |  max_length=50, blank=False, null=True, unique=True    |
-| Email         | email         | EmailField    | max_length=50, unique=True, blank=False, null=False    |
-| First Name    | first_name    | CharField     | max_length=30, blank=False, null=False    |
-| Last Name     | last_name     | CharField     | max_length=30, blank=False, null=False    |
-| Phone Number  | email         | CharField     | max_length=30, blank=False, null=False    |
-| Role          | phone         | IntegerField  | choices=ROLES, default=5    |
+| Name          | Database Key  | Field Type    | Validation           |
+| ------------- | ------------- | ------------- | ---------------------|
+| Id            | id            | AutoField     | Pk                   |
+| Date          | date          | DateField     | required             |
+| Time          | time          | TimeField     | required             |
+| Location      | location      | CharField     | max length 100       |
+
 
 
 ```Python
-    # Roles to assign to users
-    ROLES = (
-        (0, 'boss'),
-        (1, 'teacher'),
-        (2, 'sales'),
-        (3, 'receptionist'),
-        (4, 'parent'),
-        (5, 'potential user'),
-    )
+
+Validation Rule:
+
+- unique(date, time, location)
+
+This prevents duplication of slots at same place and time.
+
+- Ordered is done by date, then time.
+
 ```
 
-2. **Teacher**
+b. ***Booking***
 
-It was created in order to provide more room for manipulation of the database and provide opportunities for future developments. Users with the role of teacher will be automatically assigned to this table.
+This represents a booking made by a user.
+Extends Allauth's User model.
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-| Teacher       | user          | ForeignKey    |  CustomUser, on_delete=models.CASCADE  |
+| Name          | Database Key  | Field Type    | Validation                       |
+| ------------- | ------------- | ------------- | ---------------------------------|
+| Id            | id            | AutoField     | Pk                               |
+| User id       | user_id       | ForeignKey    | User, on_delete=CASCADE          |
+| Slot id       | slot_id       | ForeignKey    | AvailableSlot, on_delete=CASCADE |
+| Notes         | notes         | TextField     | max length 250, optional         |
+| Created at    | created_at    | DateTime      | auto_now_add=True             |
+| Status        | status        | Int           | choices=0: Pending, 1: Confirmed, 2: Cancelled, default=0: Pending|
 
 
+```Python
+
+Validation rule ensures:
+- A booking must have a valid slot
+- There is no double booking of same slot.
+- User can not book slots in the past.
+- It automatically confirms a slot if no pending booking exists.
+
+Ordering:
+The ordering is done from the most recent first.
+
+```
+
+2. #### Contact
+
+This stores contact form submissions.
+
+| Name          | Database Key  | Field Type    | Validation                       |
+| ------------- | ------------- | ------------- | ---------------------------------|
+| Id            | id            | AutoField     | Pk                               |
+| Name          | name          | CharField     | max length 100, required         |
+| Email         | email         | EmailField    | required                         |
+| Messagees     | message       | TextField     | max length 250, required         |
+| Created at    | created_at    | DateTime      | auto_now_add=True                |
 
 
 ---
@@ -162,17 +194,9 @@ It was created in order to provide more room for manipulation of the database an
 
 Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
 
-
-
 ---
 
 ## Deployment
-
-
-- The app was deployed to [Render](https://render.com/).
-- The database was deployed to [ElephantSQL](https://www.elephantsql.com/).
-
-- The app can be reached by the [link](https://cool-school.onrender.com).
 
 Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-related documentation.
 
@@ -182,19 +206,18 @@ Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-relat
 
 - [GitHub](https://github.com/) for giving the idea of the project's design.
 - [Django](https://www.djangoproject.com/) for the framework.
-- [Render](https://render.com/): for the free hosting of the website.
-- [ElephantSQL](https://www.elephantsql.com/): for the free hosting of the database.
-- [BGJar](https://www.bgjar.com/): for the free access to the background images build tool.
 - [Font awesome](https://fontawesome.com/): for the free access to icons.
 - [Heroku](https://www.heroku.com/): for the free hosting of the website.
-- [jQuery](https://jquery.com/): for providing varieties of tools to make standard HTML code look appealing.
-- [Coolors](https://coolors.co/): for providing a free platform to generate your own palette.
 - [Icons8](https://icons8.com/): for providing free access to amazing icons and illustrations.
 - [Postgresql](https://www.postgresql.org/): for providing a free database.
-- [Codemy.com](https://www.youtube.com/watch?v=N-PB-HMFmdo): for providing a free video on how to implement pagination in the project.
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en): for providing a free platform to test website responsiveness
 - [GoFullPage](chrome://extensions/?id=fdpohaocaechififmbbbbbknoalclacl): for allowing to create free full web page screenshots;
-- [Favicon Generator. For real.](https://realfavicongenerator.net/): for providing a free platform to generate favicons.
+ - [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
+ - [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
+ - [FAVICON GENERATOR](https://favicon.io/) was used to generate the favicon.
+ - [bytes](https://ui.dev/amiresponsive?url=https://eyongtarh.github.io/Eyongtarh-Tennis-Club/" ) was used to test website 
+   responsiveness.
+
 
 *All names are fictional (the majority of the names were taken from "The Simpsons" and "Rick and Morty" cartoons), and any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.*
 
@@ -207,21 +230,6 @@ Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-relat
 - [Tim Nelson](https://github.com/TravelTimN) was a great supporter of my bold idea of a project. Tim helped me to understand the concept of a database for the school app and greatly motivated me to do my best throughout the whole development stage.
 - [Aleksei Konovalov](https://github.com/lexach91), my husband and coding partner, who assisted me greatly in understanding AJAX implementation and helped me to stay sane.
 - My current workplace for providing me with the main idea for the project and incentivizing me to work on it.
-
-
-### Media
-
- - Background images, Favicon image, and images used within pages are from: [Pexels](https://www.pexels.com/).
- - I also used personal images.
-
-
-#### Tools
- - [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
- - [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
- - [FAVICON GENERATOR](https://favicon.io/) was used to generate the favicon.
- - [bytes](https://ui.dev/amiresponsive?url=https://eyongtarh.github.io/Eyongtarh-Tennis-Club/" ) was used to test website 
-   responsiveness.
-
 
 ## Acknowledgments
 
