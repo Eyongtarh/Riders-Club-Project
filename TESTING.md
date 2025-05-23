@@ -257,43 +257,42 @@ No errors or warnings were found when the code was passed through [PEP8CI](https
 
 - Contact Page
 
-![Full HTML Validation Report](documentation/validation/html_validation1.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report1.png)
 
 - Book Training Page
 
-![Full HTML Validation Report](documentation/validation/html_validation2.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report2.png)
 
 - Login Page
 
-![Full HTML Validation Report](documentation/validation/html_validation3.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report3.png)
 
 - Logout Page
 
-![Full HTML Validation Report](documentation/validation/html_validation4.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report4.png)
 
 - Registration Page
 
-![Full HTML Validation Report](documentation/validation/html_validation5.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report5.png)
 
 - Create New Booking Page
-
-![Full HTML Validation Report](documentation/validation/html_validation6.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report6.png)
 
 - Booking Details Page
 
-![Full HTML Validation Report](documentation/validation/html_validation7.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report7.png)
 
 - Update Booking Page
 
-![Full HTML Validation Report](documentation/validation/html_validation8.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report8.png)
 
 - Confirm Deletion Page
 
-![Full HTML Validation Report](documentation/validation/html_validation9.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report9.png)
 
 - Contact Form Success Page
 
-![Full HTML Validation Report](documentation/validation/html_validation11.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report11.png)
 
 
 ---
@@ -303,10 +302,16 @@ No errors or warnings were found when the code was passed through [PEP8CI](https
 Testing was conducted on the following browsers;
 
 - Safari;
+
+![Compatibility Report](documentation/compatibility/compatibility.png)
+
 - Chrome;
+
+![Compatibility Report](documentation/compatibility/compatibility1.png)
+
 - Firefox;
 
-[Compatibility Report](documentation/compatibility/compatibility.pdf)
+![Compatibility Report](documentation/compatibility/compatibility2.png)
 
 
 ---
