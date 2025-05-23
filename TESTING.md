@@ -173,129 +173,130 @@ No errors or warnings were found when passing through the official [W3C (Jigsaw)
 
 No errors or warnings were found when the code was passed through [PEP8CI](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
 
-- Home Page
+#### Riders club project
 
-![Full Python Validation Report](documentation/validation/python_validation.pdf)
+- settings.py
 
-- Contact Page
-- Book Training Page
-- Login Page
-- Logout Page
-- Registration Page
-- Create New Booking Page
-- Bookings Details Page
-- Update Booking Page
-- Confirm Deletion Page
-- Contact Form Success Page
-- Error Pages
+![Full Python Validation Report](documentation/validation/python_validation.png)
+
+- urls.py
+
+![Full Python Validation Report](documentation/validation/python_validation1.png)
+
+- env.py
+
+![Full Python Validation Report](documentation/validation/python_validation2.png)
+
+#### Home applicatiom
+
+- views.py
+
+![Full Python Validation Report](documentation/validation/python_validation3.png)
+
+#### Contact application
+
+- admin.py
+
+![Full Python Validation Report](documentation/validation/python_validation4.png)
+
+- forms.py
+
+![Full Python Validation Report](documentation/validation/python_validation5.png)
+
+- models.py
+
+![Full Python Validation Report](documentation/validation/python_validation6.png)
+
+- urls.py
+
+![Full Python Validation Report](documentation/validation/python_validation7.png)
+
+- views.py
+
+![Full Python Validation Report](documentation/validation/python_validation8.png)
+
+
+#### Home applicatiom
+
+- views.py
+
+![Full Python Validation Report](documentation/validation/python_validation3.png)
+
+#### Bookings application
+
+- admin.py
+
+![Full Python Validation Report](documentation/validation/python_validation4.png)
+
+- forms.py
+
+![Full Python Validation Report](documentation/validation/python_validation5.png)
+
+- models.py
+
+![Full Python Validation Report](documentation/validation/python_validation6.png)
+
+- urls.py
+
+![Full Python Validation Report](documentation/validation/python_validation7.png)
+
+- views.py
+
+![Full Python Validation Report](documentation/validation/python_validation8.png)
+
 
 ---
+
+
 ## Lighthouse Report
 
 ### Home Page
 
 ![Lighthouse Report. Home Page](documentation/lighthouse_reports/lighthouse_home.png)
 
-### Login Page
+- Home Page
 
-![Lighthouse Report. Login Page](documentation/lighthouse_reports/lighthouse_signin.png)
+![Full HTML Validation Report](documentation/validation/html_validation.png)
 
-### Logout Page
+- Contact Page
 
-![Lighthouse Report. Logout Page](documentation/lighthouse_reports/lighthouse_logout.png)
+![Full HTML Validation Report](documentation/validation/html_validation1.png)
 
-### Forgot Password Page
+- Book Training Page
 
-![Lighthouse Report. Forgot Password Page](documentation/lighthouse_reports/lighthouse_forgot_password.png)
+![Full HTML Validation Report](documentation/validation/html_validation2.png)
 
-### Access Limited Page
+- Login Page
 
-![Lighthouse Report. Access Limited Page](documentation/lighthouse_reports/access_limited.png)
+![Full HTML Validation Report](documentation/validation/html_validation3.png)
 
-### New Applications Page
+- Logout Page
 
-![Lighthouse Report. New Applications Page](documentation/lighthouse_reports/lighthouse_new_applications.png)
+![Full HTML Validation Report](documentation/validation/html_validation4.png)
 
-### New Application Detail Page
+- Registration Page
 
-![Lighthouse Report. New Application Detail Page](documentation/lighthouse_reports/lighthouse_application_detail.png)
+![Full HTML Validation Report](documentation/validation/html_validation5.png)
 
-### Application Detail Page
+- Create New Booking Page
 
-![Lighthouse Report. Application Detail Page](documentation/lighthouse_reports/lighthouse_application_detail.png)
+![Full HTML Validation Report](documentation/validation/html_validation6.png)
 
-### Members Page
+- Booking Details Page
 
-![Lighthouse Report. Members Page](documentation/lighthouse_reports/lighthouse_members.png)
+![Full HTML Validation Report](documentation/validation/html_validation7.png)
 
-### Profile Page
+- Update Booking Page
 
-![Lighthouse Report. Profile Page](documentation/lighthouse_reports/lighthouse_profile.png)
+![Full HTML Validation Report](documentation/validation/html_validation8.png)
 
-### Profile Edit Page
+- Confirm Deletion Page
 
-![Lighthouse Report. Profile Edit Page](documentation/lighthouse_reports/lighthouse_profile_edit.png)
+![Full HTML Validation Report](documentation/validation/html_validation9.png)
 
-### Profile Edit Password Page
+- Contact Form Success Page
 
-![Lighthouse Report. Profile Edit Password Page](documentation/lighthouse_reports/lighthouse_profile_password.png)
-
-### Profile Delete Page
-
-![Lighthouse Report. Profile Delete Page](documentation/lighthouse_reports/lighthouse_profile_delete.png)
-
-### Students Page
-
-![Lighthouse Report. Students Page](documentation/lighthouse_reports/lighthouse_students.png)
-
-### Student Detail Page
-
-![Lighthouse Report. Student Detail Page](documentation/lighthouse_reports/lighthouse_student_detail.png)
-
-### Student Edit Page
-
-![Lighthouse Report. Student Edit Page](documentation/lighthouse_reports/lighthouse_student_edit.png)
-
-### Student Delete Page
-
-![Lighthouse Report. Student Delete Page](documentation/lighthouse_reports/lighthouse_student_delete.png)
-
-### Sales Page
-
-![Lighthouse Report. Sales Page](documentation/lighthouse_reports/lighthouse_sales.png)
-
-### Sale Edit Page
-
-![Lighthouse Report. Sale Edit Page](documentation/lighthouse_reports/lighthouse_sale_edit.png)
-
-### Sale Delete Page
-
-![Lighthouse Report. Sale Delete Page](documentation/lighthouse_reports/lighthouse_sale_delete.png)
-
-### Sale Add Page
-
-![Lighthouse Report. Sale Add Page](documentation/lighthouse_reports/lighthouse_sale_add.png)
-
-### Schedule Page
-
-![Lighthouse Report. Schedule Page](documentation/lighthouse_reports/lighthouse_schedule.png)
-
-### Add Lesson Page
-
-![Lighthouse Report. Add Lesson Page](documentation/lighthouse_reports/lighthouse_add_lesson.png)
-
-### Edit Lesson Page
-
-![Lighthouse Report. Edit Lesson Page](documentation/lighthouse_reports/lighthouse_lesson_edit.png)
-
-### Delete Lesson Page
-
-![Lighthouse Report. Delete Lesson Page](documentation/lighthouse_reports/lighthouse_lesson_delete.png)
-
-### Lesson Detail Page
-
-![Lighthouse Report. Lesson Detail Page](documentation/lighthouse_reports/lighthouse_lesson_detail.png)
-
+![Full HTML Validation Report](documentation/validation/html_validation11.png)
 
 
 ---
