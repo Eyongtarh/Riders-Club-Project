@@ -115,35 +115,63 @@ Solution: I changed all related file links to capitalised first letter.
 
 ### HTML Validation:
 
-No errors were found when passing through the official [W3C](https://validator.w3.org/) validator. This checking was done manually by copying the view page source code and pasting it into the validator.
+No errors or warnigs were found when passing through the official [W3C](https://validator.w3.org/) validator. This checking was done manually by copying the view page source code and pasting it into the validator.
 
 - Home Page
 
 ![Full HTML Validation Report](documentation/validation/html_validation.png)
 
 - Contact Page
+
+![Full HTML Validation Report](documentation/validation/html_validation1.png)
+
 - Book Training Page
+
+![Full HTML Validation Report](documentation/validation/html_validation2.png)
+
 - Login Page
+
+![Full HTML Validation Report](documentation/validation/html_validation3.png)
+
 - Logout Page
+
+![Full HTML Validation Report](documentation/validation/html_validation4.png)
+
 - Registration Page
+
+![Full HTML Validation Report](documentation/validation/html_validation5.png)
+
 - Create New Booking Page
-- Bookings Details Page
+
+![Full HTML Validation Report](documentation/validation/html_validation6.png)
+
+- Booking Details Page
+
+![Full HTML Validation Report](documentation/validation/html_validation7.png)
+
 - Update Booking Page
+
+![Full HTML Validation Report](documentation/validation/html_validation8.png)
+
 - Confirm Deletion Page
+
+![Full HTML Validation Report](documentation/validation/html_validation9.png)
+
 - Contact Form Success Page
-- Error Pages
+
+![Full HTML Validation Report](documentation/validation/html_validation11.png)
 
 
 ### CSS Validation:
 
 ![Full CSS Validation Report](documentation/validation/css_validation.png)
 
-No errors found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator except for the warnings about the use of css root variables and webkits for the box-shadow. However, css code works perfectly on various devices.
+No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri).
 
 
 ### Python Validation:
 
-No errors were found when the code was passed through [PEP8CI](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
+No errors or warnings were found when the code was passed through [PEP8CI](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
 
 - Home Page
 
