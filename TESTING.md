@@ -119,52 +119,52 @@ No errors or warnigs were found when passing through the official [W3C](https://
 
 - Home Page
 
-![Full HTML Validation Report](documentation/validation/html_validation.png)
+![HTML Validation Report](documentation/validation/html_validation.png)
 
 - Contact Page
 
-![Full HTML Validation Report](documentation/validation/html_validation1.png)
+![HTML Validation Report](documentation/validation/html_validation1.png)
 
 - Book Training Page
 
-![Full HTML Validation Report](documentation/validation/html_validation2.png)
+![HTML Validation Report](documentation/validation/html_validation2.png)
 
 - Login Page
 
-![Full HTML Validation Report](documentation/validation/html_validation3.png)
+![HTML Validation Report](documentation/validation/html_validation3.png)
 
 - Logout Page
 
-![Full HTML Validation Report](documentation/validation/html_validation4.png)
+![HTML Validation Report](documentation/validation/html_validation4.png)
 
 - Registration Page
 
-![Full HTML Validation Report](documentation/validation/html_validation5.png)
+![HTML Validation Report](documentation/validation/html_validation5.png)
 
 - Create New Booking Page
 
-![Full HTML Validation Report](documentation/validation/html_validation6.png)
+![HTML Validation Report](documentation/validation/html_validation6.png)
 
 - Booking Details Page
 
-![Full HTML Validation Report](documentation/validation/html_validation7.png)
+![HTML Validation Report](documentation/validation/html_validation7.png)
 
 - Update Booking Page
 
-![Full HTML Validation Report](documentation/validation/html_validation8.png)
+![HTML Validation Report](documentation/validation/html_validation8.png)
 
 - Confirm Deletion Page
 
-![Full HTML Validation Report](documentation/validation/html_validation9.png)
+![HTML Validation Report](documentation/validation/html_validation9.png)
 
 - Contact Form Success Page
 
-![Full HTML Validation Report](documentation/validation/html_validation11.png)
+![HTML Validation Report](documentation/validation/html_validation11.png)
 
 
 ### CSS Validation:
 
-![Full CSS Validation Report](documentation/validation/css_validation.png)
+![CSS Validation Report](documentation/validation/css_validation.png)
 
 No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri).
 
@@ -177,72 +177,72 @@ No errors or warnings were found when the code was passed through [PEP8CI](https
 
 - settings.py
 
-![Full Python Validation Report](documentation/validation/python_validation.png)
+![Python Validation Report](documentation/validation/python_validation.png)
 
 - urls.py
 
-![Full Python Validation Report](documentation/validation/python_validation1.png)
+![Python Validation Report](documentation/validation/python_validation1.png)
 
 - env.py
 
-![Full Python Validation Report](documentation/validation/python_validation2.png)
+![Python Validation Report](documentation/validation/python_validation2.png)
 
 #### Home applicatiom
 
 - views.py
 
-![Full Python Validation Report](documentation/validation/python_validation3.png)
+![Python Validation Report](documentation/validation/python_validation3.png)
 
 #### Contact application
 
 - admin.py
 
-![Full Python Validation Report](documentation/validation/python_validation4.png)
+![Python Validation Report](documentation/validation/python_validation4.png)
 
 - forms.py
 
-![Full Python Validation Report](documentation/validation/python_validation5.png)
+![Python Validation Report](documentation/validation/python_validation5.png)
 
 - models.py
 
-![Full Python Validation Report](documentation/validation/python_validation6.png)
+![Python Validation Report](documentation/validation/python_validation6.png)
 
 - urls.py
 
-![Full Python Validation Report](documentation/validation/python_validation7.png)
+![Python Validation Report](documentation/validation/python_validation7.png)
 
 - views.py
 
-![Full Python Validation Report](documentation/validation/python_validation8.png)
+![Python Validation Report](documentation/validation/python_validation8.png)
 
 
 #### Home applicatiom
 
 - views.py
 
-![Full Python Validation Report](documentation/validation/python_validation3.png)
+![Python Validation Report](documentation/validation/python_validation3.png)
 
 #### Bookings application
 
 - admin.py
 
-![Full Python Validation Report](documentation/validation/python_validation4.png)
+![Python Validation Report](documentation/validation/python_validation14.png)
 
 - forms.py
 
-![Full Python Validation Report](documentation/validation/python_validation5.png)
+![Python Validation Report](documentation/validation/python_validation15.png)
 
 - models.py
 
-![Full Python Validation Report](documentation/validation/python_validation6.png)
+![Python Validation Report](documentation/validation/python_validation16.png)
 
 - urls.py
 
-![Full Python Validation Report](documentation/validation/python_validation7.png)
+![Python Validation Report](documentation/validation/python_validation17.png)
 
 - views.py
 
-![Full Python Validation Report](documentation/validation/python_validation8.png)
+![Python Validation Report](documentation/validation/python_validation18.png)
 
 
 ---
@@ -250,13 +250,10 @@ No errors or warnings were found when the code was passed through [PEP8CI](https
 
 ## Lighthouse Report
 
-### Home Page
-
-![Lighthouse Report. Home Page](documentation/lighthouse_reports/lighthouse_home.png)
 
 - Home Page
 
-![Full HTML Validation Report](documentation/validation/html_validation.png)
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report.png)
 
 - Contact Page
 
