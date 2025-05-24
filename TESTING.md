@@ -320,8 +320,61 @@ Testing was conducted on the following browsers;
 
 The responsiveness was checked manually by using devtools (Chrome) throughout the whole development. It was also checked with [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en) Chrome extension.
 
-[Responsiveness Report](documentation/responsiveness/responsiveness.pdf)
 
+- Home Page
+
+<a>
+<img src="documentation/responsiveness/iphone-14-proh.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxh.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proh.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5h.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airh.png" alt="Responsive Design Mac Air" height="400">
+</a>
+
+- Contact Page
+
+<a>
+<img src="documentation/responsiveness/iphone-14-proc.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxc.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proc.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5c.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airc.png" alt="Responsive Design Mac Air" height="400">
+</a>
+
+- Book Training Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report2.png)
+
+- Login Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report3.png)
+
+- Logout Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report4.png)
+
+- Registration Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report5.png)
+
+- Create New Booking Page
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report6.png)
+
+- Booking Details Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report7.png)
+
+- Update Booking Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report8.png)
+
+- Confirm Deletion Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report9.png)
+
+- Contact Form Success Page
+
+![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report11.png)
 
 
 ---
