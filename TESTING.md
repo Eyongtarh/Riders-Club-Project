@@ -343,7 +343,13 @@ The responsiveness was checked manually by using devtools (Chrome) throughout th
 
 - Book Training Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report2.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-prob.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxb.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-prob.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5b.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airb.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Login Page
 
