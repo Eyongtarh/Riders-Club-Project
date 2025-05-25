@@ -208,32 +208,20 @@ Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-relat
 - [Django](https://www.djangoproject.com/) for the framework.
 - [Font awesome](https://fontawesome.com/): for the free access to icons.
 - [Heroku](https://www.heroku.com/): for the free hosting of the website.
-- [Icons8](https://icons8.com/): for providing free access to amazing icons and illustrations.
 - [Postgresql](https://www.postgresql.org/): for providing a free database.
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en): for providing a free platform to test website responsiveness
-- [GoFullPage](chrome://extensions/?id=fdpohaocaechififmbbbbbknoalclacl): for allowing to create free full web page screenshots;
+ - [Juliia Konovalova](https://github.com/IuliiaKonovalova/school_app/tree/main) was used in the writing of the readme.md.
  - [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
  - [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
- - [FAVICON GENERATOR](https://favicon.io/) was used to generate the favicon.
- - [bytes](https://ui.dev/amiresponsive?url=https://eyongtarh.github.io/Eyongtarh-Tennis-Club/" ) was used to test website 
-   responsiveness.
+ - [Facicon Generator](https://favicon.io/) was used to generate the favicon.
+ - [You Tube Video](https://www.google.com/search?client=safari&sca_esv=a0cb478d38178b5b&channel=iphone_bm&q=writing+a+booking+code+with+django&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kwv-_tUbRt8pOUS8_MjaceH5Ffy-dcN-9exBnK-r4p9U5FZGwurlBIKb3t6bgXxn3LBfb3Em4V0E7us8s12vPvv_vTxf8cFJjdknaJSr4AuGvhBCHMEsTbLh2ljoLmM8ZhZqf1p2f4GVHweoatYIZU5ES6nMg&sa=X&ved=2ahUKEwi7ye2YpL-NAxWlWEEAHRAhLgIQtKgLegQIHBAB&biw=1440&bih=848&dpr=2#fpstate=ive&ip=1&vld=cid:2e6de80c,vid:wR12DjzsZ5o,st:0) was used for additional inside into booking using django.
 
-
-*All names are fictional (the majority of the names were taken from "The Simpsons" and "Rick and Morty" cartoons), and any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.*
-
+   
 
 ---
 
 ## Acknowledgments
 
-
-- [Tim Nelson](https://github.com/TravelTimN) was a great supporter of my bold idea of a project. Tim helped me to understand the concept of a database for the school app and greatly motivated me to do my best throughout the whole development stage.
-- [Aleksei Konovalov](https://github.com/lexach91), my husband and coding partner, who assisted me greatly in understanding AJAX implementation and helped me to stay sane.
-- My current workplace for providing me with the main idea for the project and incentivizing me to work on it.
-
-## Acknowledgments
-
-- [Code Institute](https://codeinstitute.net/) tutors and Mentor for their continues support.
-- [Hot Air Tools](https://www.hotairtools.com/) content for welding page.
+- [Code Institute](https://codeinstitute.net/) Tutors and my Mentor, Juliia Konovalova for their continues support.
 
 

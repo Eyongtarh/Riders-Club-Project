@@ -1,7 +1,6 @@
 # Deployment
 
-- The app was deployed to [www.heroku.com](www.heroku.com) 
-- The database was deployed to [ElephantSQL](https://www.elephantsql.com/).
+- The  Riders-Club-Project was deployed to [www.heroku.com](www.heroku.com)
 
 ## Local deployment
 
@@ -9,6 +8,8 @@
   - This project requires to install all the requirements:
   - Open the terminal window and type:
   - `pip3 install -r requirements.txt`
+
+*During the development stage DEBUG is set to True, in settings.py file but it is vital to change it to False in the production stage.*
 
 Create a local copy of the GitHub repository by following one of the two processes below:
 
@@ -39,7 +40,6 @@ Create a local copy of the GitHub repository by following one of the two process
 
       os.environ['SECRET_KEY'] = 'Add a secret key'
       os.environ['DATABASE_URL'] = 'will be used to connect to the database'
-      os.environ['DEBUG'] = 'True'
 
 
 1. Run the following commands in a terminal to make migrations: 
