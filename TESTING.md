@@ -353,11 +353,23 @@ The responsiveness was checked manually by using devtools (Chrome) throughout th
 
 - Login Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report3.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-proi.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxi.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proi.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5i.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airi.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Logout Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report4.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-proo.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxo.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proo.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5o.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airo.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Registration Page
 
