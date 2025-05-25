@@ -105,8 +105,7 @@ However, they were a few significant bugs:
 
 Solution: I changed all related file links to capitalised first letter.
 
-- Bug: 
-
+![Solved Bug](documentation/bugs/bug.png)
 
 
 ---
