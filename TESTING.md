@@ -373,7 +373,13 @@ The responsiveness was checked manually by using devtools (Chrome) throughout th
 
 - Registration Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report5.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-pror.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxr.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-pror.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5r.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airr.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Create New Booking Page
 ![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report6.png)
