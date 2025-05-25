@@ -398,7 +398,7 @@ The responsiveness was checked manually by using devtools (Chrome) throughout th
 <img src="documentation/responsiveness/iphone-14-pro-maxd.png" alt="Responsive Design iphone 14 pro max" height="400">
 <img src="documentation/responsiveness/pixel-7-prod.png" alt="Responsive Design Pixel-7" height="400">
 <img src="documentation/responsiveness/ipad-air-5d.png" alt="Responsive Design iPad-Air" height="400">
-<img src="documentation/responsiveness/macbook-aird.png" alt="Responsive Design Mac Air" height="400">
+<img src="documentation/responsiveness/macbook-airi.png" alt="Responsive Design Mac Air" height="400">
 </a>
 
 - Update Booking Page
