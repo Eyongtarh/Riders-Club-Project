@@ -382,23 +382,54 @@ The responsiveness was checked manually by using devtools (Chrome) throughout th
 </a>
 
 - Create New Booking Page
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report6.png)
+
+<a>
+<img src="documentation/responsiveness/iphone-14-pron.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxn.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-pron.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5n.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airn.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Booking Details Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report7.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-prod.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxd.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-prod.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5d.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-aird.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Update Booking Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report8.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-proi.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxi.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proi.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5i.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airi.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Confirm Deletion Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report9.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-proi.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxi.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proi.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5i.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airi.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 - Contact Form Success Page
 
-![Lighthouse Report](documentation/lighthouse_reports/lighthouse_report11.png)
+<a>
+<img src="documentation/responsiveness/iphone-14-proi.png" alt="Responsive Design iphone 14 pro" height="400">
+<img src="documentation/responsiveness/iphone-14-pro-maxi.png" alt="Responsive Design iphone 14 pro max" height="400">
+<img src="documentation/responsiveness/pixel-7-proi.png" alt="Responsive Design Pixel-7" height="400">
+<img src="documentation/responsiveness/ipad-air-5i.png" alt="Responsive Design iPad-Air" height="400">
+<img src="documentation/responsiveness/macbook-airi.png" alt="Responsive Design Mac Air" height="400">
+</a>
 
 
 ---
