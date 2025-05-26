@@ -216,9 +216,9 @@ Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-relat
  - [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
  - [Facicon Generator](https://favicon.io/) was used to generate the favicon.
  - [You Tube Video](https://www.google.com/search?client=safari&sca_esv=a0cb478d38178b5b&channel=iphone_bm&q=writing+a+booking+code+with+django&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kwv-_tUbRt8pOUS8_MjaceH5Ffy-dcN-9exBnK-r4p9U5FZGwurlBIKb3t6bgXxn3LBfb3Em4V0E7us8s12vPvv_vTxf8cFJjdknaJSr4AuGvhBCHMEsTbLh2ljoLmM8ZhZqf1p2f4GVHweoatYIZU5ES6nMg&sa=X&ved=2ahUKEwi7ye2YpL-NAxWlWEEAHRAhLgIQtKgLegQIHBAB&biw=1440&bih=848&dpr=2#fpstate=ive&ip=1&vld=cid:2e6de80c,vid:wR12DjzsZ5o,st:0) was used for additional inside into booking using django.
+ - [Code Institute](https://codeinstitute.net/) Codestar Blog app walkthrough projects was used to in building my project.
 
-   
-
+ 
 ---
 
 ## Acknowledgments
