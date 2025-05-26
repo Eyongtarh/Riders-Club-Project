@@ -82,7 +82,8 @@ The website was developed to meet the need to improve skills for:
     + [Compress JPEG](https://compressjpeg.com/) was used to compress JPEG images.
     + [IMGonline.com.ua](https://www.imgonline.com.ua/eng/resize-image.php) was used to resize images.
     + [FAVICON GENERATOR](https://favicon.io/) was used to generate the favicon.
-    + [Bytes](https://ui.dev/amiresponsive?url=https://eyongtarh.github.io/Eyongtarh-Tennis-Club/" ) was used to test website wireframes.
+    + [Figma](https://www.figma.com/) was used to build website wireframes.
+    + [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en) was used to test website responsiveness.
 
 
 
@@ -207,7 +208,7 @@ Please refer to the [DEPLOYMENT.md](DEPLOYMENT.md) file for all deployment-relat
 - [GitHub](https://github.com/) for giving the idea of the project's design.
 - [Django](https://www.djangoproject.com/) for the framework.
 - [Font awesome](https://fontawesome.com/): for the free access to icons.
-- [Heroku](https://www.heroku.com/): for the free hosting of the website.
+- [Heroku](https://www.heroku.com/): for the hosting of the website.
 - [Postgresql](https://www.postgresql.org/): for providing a free database.
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en): for providing a free platform to test website responsiveness
  - [Juliia Konovalova](https://github.com/IuliiaKonovalova/school_app/tree/main) was used in the writing of the readme.md.
