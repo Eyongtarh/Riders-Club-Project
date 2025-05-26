@@ -27,9 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" />
-    </noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
@@ -41,7 +39,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" media="print" onload="this.media='all'" />
   </head>
 
-  <body class="d-flex flex-column h-100 main-bg">
+  <body class="d-flex flex-column h-100">
     <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
@@ -96,7 +94,7 @@
       </div>
     </header>
     <!-- Main Content -->
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0">
       <p class="text-end m-3">
         {% if user.is_authenticated %}
           Logged in as {{ user }}
