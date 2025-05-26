@@ -116,5 +116,5 @@ Click "View build logs" to see the progress of the deployment.
 
 **Final Deployment**
 
-* Set debug to False locally + delete DISABLE_COLLECTSTATIC from config vars in Heroku dashboard.
+* Set debug to False locally + delete DISABLE_COLLECTSTATIC from config vars in Heroku dashboard after collecting static files.
 * Commit and push the changes to GitHub.
